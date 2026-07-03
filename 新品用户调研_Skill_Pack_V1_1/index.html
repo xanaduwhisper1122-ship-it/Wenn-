@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>新品用户调研内部工具</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">New Product Research</p>
+        <h1>新品用户调研内部工具</h1>
+      </div>
+      <div class="top-actions">
+        <button id="loadExampleBtn" class="ghost-btn" type="button" title="载入示例">示例</button>
+        <button id="resetBtn" class="icon-btn" type="button" title="清空">↺</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <section class="input-panel" aria-label="新品方向输入">
+        <div class="panel-heading">
+          <h2>新品方向</h2>
+          <label class="file-trigger" title="上传 TXT / MD / CSV 文本">
+            上传
+            <input id="briefFile" type="file" accept=".txt,.md,.csv,.tsv" />
+          </label>
+        </div>
+
+        <label>
+          项目名称
+          <input id="projectName" type="text" placeholder="例如：后拉式易穿脱塑身衣" />
+        </label>
+
+        <label>
+          新品方向
+          <textarea id="direction" rows="4" placeholder="输入新品机会点、结构创新、功能卖点或目标品类"></textarea>
+        </label>
+
+        <label>
+          产品概念
+          <textarea id="concept" rows="5" placeholder="用 1-3 句话说明产品是什么、解决什么痛点、差异化在哪里"></textarea>
+        </label>
+
+        <label>
+          调研对象
+          <input id="audience" type="text" placeholder="例如：品牌现有海外社群用户 / Amazon 用户" />
+        </label>
+
+        <label>
+          调研渠道
+          <input id="channel" type="text" placeholder="例如：Google Form + 社群发帖" />
+        </label>
+
+        <label>
+          本次想验证
+          <textarea id="validation" rows="6" placeholder="每行一个验证点，例如：&#10;目标用户是否存在&#10;如厕不便是否为强痛点&#10;用户是否愿意为结构多付 $5-$10"></textarea>
+        </label>
+
+        <button id="generateBtn" class="primary-btn" type="button">生成问卷</button>
+      </section>
+
+      <section class="main-panel" aria-label="调研工作台">
+        <nav class="tabs" aria-label="功能切换">
+          <button class="tab active" type="button" data-tab="questionnaire">问卷生成</button>
+          <button class="tab" type="button" data-tab="analysis">结果分析</button>
+          <button class="tab" type="button" data-tab="report">老板报告</button>
+        </nav>
+
+        <section id="questionnaireTab" class="tab-panel active" aria-label="问卷生成结果">
+          <div class="toolbar">
+            <div>
+              <h2>问卷与投放素材</h2>
+              <p id="questionnaireStatus">填写新品方向后生成。</p>
+            </div>
+            <div class="toolbar-actions">
+              <button id="copyTsvBtn" class="ghost-btn" type="button">复制 TSV</button>
+              <button id="downloadTsvBtn" class="ghost-btn" type="button">下载 TSV</button>
+              <button id="downloadBriefBtn" class="ghost-btn" type="button">下载问卷文档</button>
+            </div>
+          </div>
+
+          <div class="output-grid">
+            <article class="output-block wide">
+              <h3>调研定位与假设</h3>
+              <div id="logicOutput" class="rich-output empty-state">暂无内容</div>
+            </article>
+
+            <article class="output-block">
+              <h3>Google Form 信息</h3>
+              <div id="formMetaOutput" class="rich-output empty-state">暂无内容</div>
+            </article>
+
+            <article class="output-block">
+              <h3>社群发帖英文文案</h3>
+              <textarea id="postOutput" readonly rows="10"></textarea>
+            </article>
+
+            <article class="output-block wide">
+              <h3>Google Sheet 可粘贴版</h3>
+              <textarea id="tsvOutput" rows="16" spellcheck="false"></textarea>
+            </article>
+          </div>
+        </section>
+
+        <section id="analysisTab" class="tab-panel" aria-label="问卷结果分析">
+          <div class="toolbar">
+            <div>
+              <h2>上传结果并分析</h2>
+              <p>支持 Google Forms 导出的 CSV / TSV。上传后会按本 skill 包的判断标准计算关键指标。</p>
+            </div>
+            <label class="file-trigger" title="上传问卷结果 CSV / TSV">
+              上传结果
+              <input id="resultsFile" type="file" accept=".csv,.tsv,.txt" />
+            </label>
+          </div>
+
+          <div class="metric-strip" id="metricStrip" aria-live="polite"></div>
+
+          <div class="output-grid">
+            <article class="output-block">
+              <h3>综合判断</h3>
+              <div id="decisionOutput" class="rich-output empty-state">等待上传结果</div>
+            </article>
+            <article class="output-block">
+              <h3>主要喜欢点</h3>
+              <div id="likesOutput" class="rich-output empty-state">等待上传结果</div>
+            </article>
+            <article class="output-block">
+              <h3>主要担忧点</h3>
+              <div id="concernsOutput" class="rich-output empty-state">等待上传结果</div>
+            </article>
+            <article class="output-block">
+              <h3>开放题 VOC</h3>
+              <div id="vocOutput" class="rich-output empty-state">等待上传结果</div>
+            </article>
+          </div>
+        </section>
+
+        <section id="reportTab" class="tab-panel" aria-label="老板汇报">
+          <div class="toolbar">
+            <div>
+              <h2>老板汇报</h2>
+              <p id="reportStatus">上传结果后自动生成 10 页结构化报告。</p>
+            </div>
+            <div class="toolbar-actions">
+              <button id="copyReportBtn" class="ghost-btn" type="button">复制报告</button>
+              <button id="downloadReportBtn" class="ghost-btn" type="button">下载 Markdown</button>
+              <button id="downloadHtmlReportBtn" class="ghost-btn" type="button">下载 HTML</button>
+            </div>
+          </div>
+          <div id="reportOutput" class="report-output empty-state">暂无报告</div>
+        </section>
+      </section>
+    </main>
+
+    <template id="metricTemplate">
+      <div class="metric">
+        <span class="metric-label"></span>
+        <strong class="metric-value"></strong>
+        <small class="metric-threshold"></small>
+      </div>
+    </template>
+
+    <script src="app.js"></script>
+  </body>
+</html>

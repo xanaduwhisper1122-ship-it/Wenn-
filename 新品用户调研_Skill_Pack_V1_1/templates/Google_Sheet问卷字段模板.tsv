@@ -1,0 +1,15 @@
+section	question	type	options	required	description
+User Screening	Have you ever worn or purchased this product category?	single	Yes, I use it often|Yes, I use it sometimes|I have purchased it before but rarely use it|No, but I’m interested in trying it|No, and I’m not interested	TRUE	
+Usage Scenario	When do you usually use or consider using this product?	multiple	Daily use|Work / office|Travel|Special events|Under dresses|Under tight clothes|Other (please specify below)	TRUE	Select all that apply.
+Usage Scenario	If you selected Other, please specify:	short		FALSE	
+Pain Point	What problems have you experienced with this type of product?	multiple	It is uncomfortable|It is hard to put on or take off|It does not stay in place|It shows under clothes|It does not work as expected|I have not experienced these problems|Other (please specify below)	TRUE	Select all that apply.
+Pain Point	If you selected Other, please specify:	short		FALSE	
+Pain Point	How frustrating is this problem for you?	scale	1-5	TRUE	1 = Not a problem at all, 5 = Extremely frustrating.
+Concept Test	How interested are you in this new product concept?	single	Very interested|Somewhat interested|Not sure|Not very interested|Not interested at all	TRUE	
+Concept Test	What do you like most about this concept?	multiple	It solves a real problem|It feels more convenient|It may be more comfortable|It seems useful for real-life situations|I don’t see much benefit|Other (please specify below)	TRUE	Select all that apply.
+Concept Test	If you selected Other, please specify:	short		FALSE	
+Concern Test	What concerns would you have about this concept?	multiple	I worry it may not work well|I worry it may be uncomfortable|I worry it may show under clothes|I worry the price may be too high|I have no major concerns|Other (please specify below)	TRUE	Select all that apply.
+Concern Test	If you selected Other, please specify:	short		FALSE	
+Purchase Intent	Would you consider buying this product if it works as described?	single	Yes, definitely|Maybe, if the quality is good|Maybe, if the price is reasonable|Not sure|No	TRUE	
+Purchase Intent	Would you pay a little more for this improved feature?	single	Yes, I would pay $5-$10 more|Yes, I would pay $10-$15 more|Maybe, depending on the quality|No, I would not pay more|Not sure	TRUE	
+Open Feedback	What would make you more likely to buy this product?	paragraph		FALSE	Please share anything that would make you more likely to buy this product.

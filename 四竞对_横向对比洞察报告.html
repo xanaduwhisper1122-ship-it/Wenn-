@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>四竞对横向对比洞察报告</title>
+  <style>
+    :root{
+      --ink:#172033;--muted:#667085;--line:#e5e7eb;--soft:#f6f8fb;--card:#fff;
+      --blue:#2563eb;--green:#059669;--orange:#ea580c;--red:#dc2626;--violet:#7c3aed;
+      --shadow:0 18px 50px rgba(20,35,70,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans SC",Arial,sans-serif;color:var(--ink);background:#f7f9fc}
+    .wrap{max-width:1440px;margin:auto;padding:24px 24px 70px}
+    .hero{border-radius:18px;padding:34px;background:linear-gradient(135deg,#172033,#243b67 58%,#2563eb);color:#fff;box-shadow:var(--shadow)}
+    .eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#bfdbfe}
+    h1{font-size:44px;line-height:1.08;margin:12px 0 14px;letter-spacing:-.02em}
+    .hero p{max-width:1040px;line-height:1.8;margin:0;color:rgba(255,255,255,.88)}
+    .chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .chip{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);border-radius:999px;padding:8px 12px;font-weight:800;font-size:13px}
+    .nav{position:sticky;top:10px;z-index:20;margin:16px 0 22px;border-radius:999px;padding:9px;background:rgba(255,255,255,.88);box-shadow:0 12px 36px rgba(20,35,70,.08);display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
+    .nav a{text-decoration:none;color:#344054;border-radius:999px;padding:9px 12px;font-size:13px;font-weight:800}
+    .section{margin-top:20px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 12px 32px rgba(20,35,70,.05)}
+    .head{display:flex;align-items:flex-end;justify-content:space-between;gap:18px;flex-wrap:wrap;margin-bottom:18px}
+    .label{font-size:13px;font-weight:900;color:var(--blue);letter-spacing:.08em;text-transform:uppercase}
+    h2{font-size:30px;margin:7px 0 0;letter-spacing:-.02em}
+    h3{font-size:20px;margin:0 0 10px}
+    .desc{max-width:820px;color:var(--muted);line-height:1.75;font-size:14px}
+    .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .card{border:1px solid var(--line);background:#fff;border-radius:12px;padding:16px}
+    .card.blue{background:#eff6ff;border-color:#bfdbfe}.card.green{background:#ecfdf5;border-color:#bbf7d0}.card.orange{background:#fff7ed;border-color:#fed7aa}.card.red{background:#fef2f2;border-color:#fecaca}
+    .tag{display:inline-flex;border-radius:999px;padding:6px 10px;font-size:12px;font-weight:900;background:#eef2ff;color:#31427a;margin:0 6px 8px 0}
+    .metric strong{display:block;font-size:30px;letter-spacing:-.02em}.metric span{display:block;color:var(--muted);font-size:13px;line-height:1.6}
+    .summary-card{display:flex;flex-direction:column;gap:12px}
+    .summary-img{width:100%;aspect-ratio:1/1.05;object-fit:cover;object-position:top center;border-radius:10px;background:#f3f4f6;border:1px solid rgba(226,232,240,.9)}
+    .summary-top{display:flex;align-items:flex-start;justify-content:space-between;gap:10px}
+    .amazon-btn{display:inline-flex;align-items:center;justify-content:center;width:100%;margin-top:auto;border-radius:999px;padding:9px 12px;background:#172033;color:#fff;text-decoration:none;font-size:13px;font-weight:900}
+    .amazon-btn:hover{background:#2563eb}
+    .entity{display:block}
+    .entity-asin{display:block;font-weight:950;font-size:18px;letter-spacing:.01em;color:#172033;white-space:nowrap}
+    .entity-brand{display:block;color:var(--muted);font-size:12px;font-weight:800;line-height:1.35;margin-top:2px}
+    th .entity-asin{font-size:15px}
+    th .entity-brand{font-size:11px}
+    .metric .entity-asin{font-size:28px;letter-spacing:-.01em}
+    .metric .entity-brand{font-size:13px;color:#475467;margin-bottom:8px}
+    .verdict{font-size:18px;line-height:1.8}
+    .verdict b{color:#0f3f8f}
+    .table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px}
+    table{width:100%;border-collapse:collapse;background:#fff;min-width:980px}
+    th,td{padding:13px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top;font-size:14px;line-height:1.6}
+    th{background:#f1f5f9;color:#344054;font-weight:900;white-space:nowrap}
+    tr:last-child td{border-bottom:0}
+    td b{color:#101828}
+    .brand{display:block;color:var(--muted);font-size:12px;font-weight:800}.asin{display:block;font-weight:950;font-size:16px;color:#101828}
+    .rank{display:inline-flex;width:28px;height:28px;border-radius:8px;align-items:center;justify-content:center;background:#eef2ff;color:#1d4ed8;font-weight:900;margin-right:8px}
+    .bar{height:10px;background:#e5e7eb;border-radius:999px;overflow:hidden;margin-top:8px}.bar i{display:block;height:100%;background:linear-gradient(90deg,#2563eb,#10b981);border-radius:999px}
+    .list{margin:0;padding-left:18px;line-height:1.85;color:#344054}
+    .callout{border-left:5px solid var(--blue);background:#f8fbff;border-radius:10px;padding:14px 16px;line-height:1.8;color:#344054}
+    .visual-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+    .visual{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:#fff}
+    .visual button{display:block;width:100%;border:0;background:#fff;padding:0;cursor:pointer;text-align:left;color:inherit}
+    .visual img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:top;display:block;background:#f3f4f6}
+    .visual .cap{padding:12px}.visual .cap b{display:block}.visual .cap span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+    .pill{display:inline-flex;align-items:center;border-radius:999px;padding:6px 10px;font-weight:900;font-size:12px;background:#f1f5f9;color:#344054}
+    .score{font-weight:900}.good{color:var(--green)}.warn{color:var(--orange)}.bad{color:var(--red)}
+    .footer{text-align:center;color:#98a2b3;font-size:12px;margin-top:22px}
+    .modal{position:fixed;inset:0;background:rgba(15,23,42,.78);display:none;z-index:80}
+    .modal.show{display:block}
+    .modal-toolbar{position:sticky;top:0;z-index:2;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 56px 10px;background:linear-gradient(180deg,rgba(15,23,42,.92),rgba(15,23,42,.68))}
+    .modal-toolbar button,.modal-toolbar a{border:1px solid rgba(255,255,255,.25);background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:8px 12px;font-size:13px;font-weight:900;text-decoration:none;cursor:pointer}
+    .modal-body{height:100vh;overflow:auto;padding:10px 22px 34px;text-align:center}
+    .modal img{width:min(92vw,1200px);height:auto;max-width:none;max-height:none;border-radius:12px;background:#fff;box-shadow:0 24px 80px rgba(0,0,0,.35)}
+    .modal.zoom-150 img{width:min(138vw,1800px)}
+    .modal.zoom-200 img{width:min(184vw,2400px)}
+    .close{position:fixed;right:22px;top:10px;z-index:3;color:#fff;font-size:32px;font-weight:900;cursor:pointer}
+    @media(max-width:1120px){.grid-4,.visual-grid{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+    @media(max-width:720px){.wrap{padding:16px 12px 48px}h1{font-size:31px}h2{font-size:24px}.grid-4,.visual-grid{grid-template-columns:1fr}.nav{position:static;border-radius:14px;justify-content:flex-start}.section{padding:18px}}
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="eyebrow">Horizontal Competitor Insight Report</div>
+    <h1>四个 Waist Trainer 竞对<br>横向对比洞察报告</h1>
+    <p>基于四份本地竞对报告、Amazon 图片模块、评论 Excel 与父体关键词数据，统一比较 B0G2RJ1XFR、B0DK3G3TGP、B0FLJN5XJW、B0DPBW1T2F 在经营结果、搜索入口、评论口碑、尺码风险、视觉表达和企划机会上的差异。品牌仅作为副标题辅助识别。核心判断：市场不是缺一个更强压迫的腰封，而是缺一个把“有效塑形、可日常穿、尺码不踩雷”讲清楚并做扎实的产品。</p>
+    <div class="chips">
+      <span class="chip">核心矛盾：塑形效果 vs 压迫不适</span>
+      <span class="chip">最大退货风险：尺码/局部合身</span>
+      <span class="chip">机会方向：有结果，但不要强压迫</span>
+      <span class="chip">图片模块：整体点击放大</span>
+    </div>
+  </section>
+
+  <nav class="nav">
+    <a href="#summary">总览结论</a>
+    <a href="#kpi">KPI 对比</a>
+    <a href="#position">定位差异</a>
+    <a href="#voc">VOC 洞察</a>
+    <a href="#keyword">关键词机会</a>
+    <a href="#visual">视觉概览</a>
+    <a href="#strategy">企划建议</a>
+  </nav>
+
+  <section id="summary" class="section">
+    <div class="head">
+      <div><div class="label">01 · Executive Summary</div><h2>先给结论：成熟盘看 B0DK3G3TGP，口碑盘看 B0DPBW1T2F / B0FLJN5XJW，风险样本看 B0G2RJ1XFR</h2></div>
+      <div class="desc">四个竞对都在 Waist Trainer / Corset / Tummy Control 心智里竞争，但它们不是同一种打法。</div>
+    </div>
+    <div class="grid-4">
+      <div class="card green metric summary-card">
+        <img class="summary-img" src="amazon_image_modules_B0DK3G3TGP/gallery/00_report_main.jpg" alt="B0DK3G3TGP 主图">
+        <div class="summary-top"><span class="pill">销售验证最强</span></div>
+        <span class="entity"><strong class="entity-asin">B0DK3G3TGP</strong><small class="entity-brand">SHAPESHE</small></span>
+        <span>前台 4.3★ / 1,284，近30天父体销量 8,085，已经验证黑色主盘、肤色辅助、粉色副色的成熟结构。</span>
+        <a class="amazon-btn" href="https://www.amazon.com/dp/B0DK3G3TGP" target="_blank" rel="noopener">跳转 Amazon</a>
+      </div>
+      <div class="card blue metric summary-card">
+        <img class="summary-img" src="amazon_image_modules_B0DPBW1T2F/gallery/01_37c4645a3c.jpg" alt="B0DPBW1T2F 主图">
+        <div class="summary-top"><span class="pill">口碑效率最好</span></div>
+        <span class="entity"><strong class="entity-asin">B0DPBW1T2F</strong><small class="entity-brand">SHAPSHE</small></span>
+        <span>样本均星 4.43★，低星仅 9.0%，关键词流量 8,535,783；“舒适 + 高性价比 + 23 根钢骨”更容易形成好评。</span>
+        <a class="amazon-btn" href="https://www.amazon.com/dp/B0DPBW1T2F?th=1&psc=1" target="_blank" rel="noopener">跳转 Amazon</a>
+      </div>
+      <div class="card orange metric summary-card">
+        <img class="summary-img" src="amazon_image_modules_B0FLJN5XJW/gallery/01_9123b311f8.jpg" alt="B0FLJN5XJW 主图">
+        <div class="summary-top"><span class="pill">流量与页面强</span></div>
+        <span class="entity"><strong class="entity-asin">B0FLJN5XJW</strong><small class="entity-brand">SHAPERX</small></span>
+        <span>样本均星 4.38★，主词覆盖强，视觉链路完整；但尺码、长躯干、大码和效果预期仍是短板。</span>
+        <a class="amazon-btn" href="https://www.amazon.com/dp/B0FLJN5XJW?th=1&psc=1" target="_blank" rel="noopener">跳转 Amazon</a>
+      </div>
+      <div class="card red metric summary-card">
+        <img class="summary-img" src="amazon_image_modules_B0G2RJ1XFR/gallery/01_d85053a163.jpg" alt="B0G2RJ1XFR 主图">
+        <div class="summary-top"><span class="pill">风险暴露最明显</span></div>
+        <span class="entity"><strong class="entity-asin">B0G2RJ1XFR</strong><small class="entity-brand">SHAPELLX</small></span>
+        <span>前台 3.2★，样本低星 21.2%；“偏小、过紧、背部挤肉”提示强压迫路线需要降噪。</span>
+        <a class="amazon-btn" href="https://www.amazon.com/dp/B0G2RJ1XFR" target="_blank" rel="noopener">跳转 Amazon</a>
+      </div>
+    </div>
+    <div class="section" style="box-shadow:none;margin-top:14px;background:#f8fbff">
+      <div class="verdict"><b>最终机会一句话：</b>不要把新品定义成“更强、更硬、更专业”的传统 waist trainer；应该定义成“有可见塑形结果，但日常更能穿、尺码更清楚、局部更不挤”的舒适型塑身上衣 / faja vest。页面第一优先级不是再堆卖点，而是把尺码、胸部容量、躯干长度、腋下/背部挤肉、坐下舒适度讲透。</div>
+    </div>
+  </section>
+
+  <section id="kpi" class="section">
+    <div class="head">
+      <div><div class="label">02 · KPI Matrix</div><h2>四竞对基础指标横向表</h2></div>
+      <div class="desc">注意：B0G2RJ1XFR / B0DK3G3TGP 同时有前台评分与评论样本均星；B0FLJN5XJW / B0DPBW1T2F 以本地评论样本均星和关键词流量为主。</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>竞对</th><th>产品定位</th><th>经营/流量</th><th>评论口碑</th><th>主色/变体信号</th><th>核心风险</th><th>对新品启发</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="asin">B0DK3G3TGP</span><span class="brand">SHAPESHE</span></td>
+            <td>成熟 waist trainer / corset，覆盖日常、运动、恢复和胸部支撑。</td>
+            <td>价格 $50.99；前台 4.3★ / 1,284；近30天父体销量 8,085；销售额 $412,254。</td>
+            <td>462 条样本，均星 3.97★；4-5 星 71.4%，1-2 星 20.1%。</td>
+            <td>Black 279，Tan 100，Pink 51；粉色有需求但仍是副色。</td>
+            <td>偏大与偏小同时存在，上半身/罩杯/背部不贴合，压迫、卷边、穿脱困难。</td>
+            <td>证明大盘成立；新品必须用更清楚的体型尺码说明切入。</td>
+          </tr>
+          <tr>
+            <td><span class="asin">B0DPBW1T2F</span><span class="brand">SHAPSHE</span></td>
+            <td>23 根螺旋钢骨腰封，主打收腰训练、运动增效、产后恢复和日常支撑。</td>
+            <td>关键词流量 8,535,783；最大入口 waist trainer for women 1,709,667。</td>
+            <td>201 条样本，均星 4.43★；4-5 星 83.1%，1-2 星 9.0%。</td>
+            <td>Black 150，Tan 40，Mocha 8；尺码评论集中在 S/M/XS。</td>
+            <td>尺码问题 48%，收紧效果不足 11%，长躯干覆盖与真实效果预期需兜底。</td>
+            <td>“舒适高性价比 + 基础塑形支撑”比过度专业化更容易收获好评。</td>
+          </tr>
+          <tr>
+            <td><span class="asin">B0FLJN5XJW</span><span class="brand">SHAPERX</span></td>
+            <td>15 根钢骨 corset shapewear，强调即时收腰、姿态支撑、运动和产后场景。</td>
+            <td>关键词流量 4,831,749；最大入口 waist trainer for women 1,076,466。</td>
+            <td>203 条样本，均星 4.38★；4-5 星 84.7%，1-2 星 9.4%。</td>
+            <td>Black 67，Beige 23，Pink 4；变体评论未标注较多，颜色证据弱于 B0DK3G3TGP。</td>
+            <td>尺码/合身问题 57%，收腹效果不稳定 13%，气味/皮肤刺激和闭合耐用性各 10%。</td>
+            <td>页面链路完整，但要避免标题卖点拥挤；尺码页应成为转化防线。</td>
+          </tr>
+          <tr>
+            <td><span class="asin">B0G2RJ1XFR</span><span class="brand">SHAPELLX</span></td>
+            <td>Corset top + waist trainer + faja 组合心智，试图做更上衣化的塑形产品。</td>
+            <td>价格 $59.99；前台 3.2★ / 80；小类 #70；30天父体销量 406。</td>
+            <td>52 条样本，均星 3.81★；4-5 星 71.2%，1-2 星 21.2%。</td>
+            <td>Black 34，Skin 8，Pink/Pink Beige 合计 4；黑色仍是基础盘。</td>
+            <td>尺码明显偏小、需买大；过紧、背部挤肉、压迫体验拉低前台评分。</td>
+            <td>验证“上衣化”有机会，但不能靠强压迫冲卖点，需先修尺码和舒适边界。</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="position" class="section">
+    <div class="head">
+      <div><div class="label">03 · Positioning</div><h2>定位差异：四个竞对其实分成三类打法</h2></div>
+      <div class="desc">竞品标题都塞进 waist trainer、corset、faja、tummy control，但用户真正识别的是“穿上后能不能变瘦、能不能忍、尺码会不会错”。</div>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <span class="rank">A</span><h3>成熟销量型：B0DK3G3TGP <small class="entity-brand">SHAPESHE</small></h3>
+        <p class="desc">优势是销售体量、颜色/尺码覆盖和评论资产；短板是成熟产品常见的两端尺码争议、局部不贴合和压迫疲劳。</p>
+        <div class="bar"><i style="width:92%"></i></div>
+      </div>
+      <div class="card">
+        <span class="rank">B</span><h3>口碑效率型：B0DPBW1T2F / B0FLJN5XJW <small class="entity-brand">SHAPSHE / SHAPERX</small></h3>
+        <p class="desc">两者样本均星都在 4.38★ 以上，说明“舒适、质量、支撑、性价比”的组合更容易被接受；但尺码解释仍没完全解决。</p>
+        <div class="bar"><i style="width:84%"></i></div>
+      </div>
+      <div class="card">
+        <span class="rank">C</span><h3>风险暴露型：B0G2RJ1XFR <small class="entity-brand">SHAPELLX</small></h3>
+        <p class="desc">更接近上衣化/faja vest 的方向，但评分被偏小和强压迫拖累。它提供了新品应避开的反面证据。</p>
+        <div class="bar"><i style="width:58%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="voc" class="section">
+    <div class="head">
+      <div><div class="label">04 · VOC Insight</div><h2>评论洞察：好评买的是结果，差评退的是尺码</h2></div>
+      <div class="desc">四个竞对的评论主题高度一致，说明类目共性矛盾非常稳定。</div>
+    </div>
+    <div class="grid-2">
+      <div class="card green">
+        <h3>好评驱动</h3>
+        <ul class="list">
+          <li><b>Snatched / hourglass：</b>腰线即时变明显，是四个竞对共同的强正反馈。</li>
+          <li><b>Comfortable enough：</b>不是完全无感，而是“压缩有效但还能坐、动、穿几个小时”。</li>
+          <li><b>Quality / sturdy：</b>钢骨、拉链、钩扣、面料厚实会直接转化为“值这个价格”。</li>
+          <li><b>Support：</b>背部支撑、姿态改善、运动辅助是辅助卖点，但需要避免医疗化过度承诺。</li>
+        </ul>
+      </div>
+      <div class="card red">
+        <h3>差评触发</h3>
+        <ul class="list">
+          <li><b>尺码不准：</b>偏小、偏大、同尺码不一致、需买大/买小的评论都会造成退货。</li>
+          <li><b>局部挤压：</b>背部挤肉、胸部/罩杯不贴、腋下勒、腹部卷边，比单纯腰围更影响体验。</li>
+          <li><b>穿脱门槛：</b>钩扣、拉链、束带如果需要他人帮助，会降低日常使用频次。</li>
+          <li><b>效果预期落差：</b>Before/After 太强但缺少体型说明，会让用户把自然体型差异归因成产品无效。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="table-wrap" style="margin-top:14px">
+      <table>
+        <thead><tr><th>维度</th><th><span class="entity"><span class="entity-asin">B0DK3G3TGP</span><span class="entity-brand">SHAPESHE</span></span></th><th><span class="entity"><span class="entity-asin">B0DPBW1T2F</span><span class="entity-brand">SHAPSHE</span></span></th><th><span class="entity"><span class="entity-asin">B0FLJN5XJW</span><span class="entity-brand">SHAPERX</span></span></th><th><span class="entity"><span class="entity-asin">B0G2RJ1XFR</span><span class="entity-brand">SHAPELLX</span></span></th><th>横向判断</th></tr></thead>
+        <tbody>
+          <tr><td><b>样本均星</b></td><td>3.97★</td><td class="score good">4.43★</td><td class="score good">4.38★</td><td>3.81★</td><td>口碑最高的是 B0DPBW1T2F / B0FLJN5XJW，成熟销量并不等于最低差评。</td></tr>
+          <tr><td><b>低星占比</b></td><td class="score bad">20.1%</td><td class="score good">9.0%</td><td class="score good">9.4%</td><td class="score bad">21.2%</td><td>低星高的链接都暴露强压迫、尺码不确定和局部合身问题。</td></tr>
+          <tr><td><b>带图/视频</b></td><td>117 / 21</td><td>43 / 15</td><td>41 / 6</td><td>18 / 3</td><td>视觉评论能证明效果，也会放大版型问题；新品应主动引导用户按体型晒单。</td></tr>
+          <tr><td><b>核心差评</b></td><td>双向尺码、压迫、卷边</td><td>尺码、效果不足、长躯干</td><td>尺码、大码、气味/闭合</td><td>偏小、过紧、背部挤肉</td><td>真正要解决的是“腰围以外”的体型适配。</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="keyword" class="section">
+    <div class="head">
+      <div><div class="label">05 · Keyword Opportunity</div><h2>关键词机会：主词很大，但新链接不能只靠主词硬打</h2></div>
+      <div class="desc">B0DPBW1T2F 与 B0FLJN5XJW 的父体关键词都说明主词池巨大，但竞争也重。新品更适合用主词承接类目，用长尾词承接差异。</div>
+    </div>
+    <div class="grid-3">
+      <div class="card">
+        <h3>主入口</h3>
+        <p class="desc">waist trainer for women、waist trainer、corset、faja、corset shapewear 是必须覆盖的基本盘。B0DPBW1T2F 在主词自然和广告排名上更强，说明销量与广告势能都已形成。</p>
+      </div>
+      <div class="card">
+        <h3>差异入口</h3>
+        <p class="desc">new mom / postpartum、long torso、plus size、comfortable waist trainer、under clothes、back support 等长尾更适合新品讲“体型适配”和“日常可穿”。</p>
+      </div>
+      <div class="card">
+        <h3>页面策略</h3>
+        <p class="desc">标题不要把所有卖点堆满。主图和 A+ 应围绕“尺码决策、压缩等级、局部不挤、穿脱步骤、不同体型效果”建立可信度。</p>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:14px"><b>关键词与 VOC 的交叉机会：</b>高搜索词负责拉流量，评论痛点负责定义页面证据。新品最值得占的位置不是“最强 waist trainer”，而是“comfortable waist trainer / faja vest / tummy control shapewear with clear sizing”。</div>
+  </section>
+
+  <section id="visual" class="section">
+    <div class="head">
+      <div><div class="label">06 · Visual Evidence</div><h2>图片模块简化：每个竞对保留整体点击放大</h2></div>
+      <div class="desc">不逐张拆图，只保留套图或 A+ 纵向总览。点击任一图片可整体放大查看。</div>
+    </div>
+    <div class="visual-grid">
+      <div class="visual"><button onclick="openModal('amazon_image_modules_B0DK3G3TGP/gallery_vertical.png')"><img src="amazon_image_modules_B0DK3G3TGP/gallery_vertical.png" alt="B0DK3G3TGP gallery"><div class="cap"><b>B0DK3G3TGP</b><span>SHAPESHE · 套图总览</span></div></button></div>
+      <div class="visual"><button onclick="openModal('amazon_image_modules_B0DPBW1T2F/gallery_vertical.png')"><img src="amazon_image_modules_B0DPBW1T2F/gallery_vertical.png" alt="B0DPBW1T2F gallery"><div class="cap"><b>B0DPBW1T2F</b><span>SHAPSHE · 套图总览</span></div></button></div>
+      <div class="visual"><button onclick="openModal('amazon_image_modules_B0FLJN5XJW/gallery_vertical.png')"><img src="amazon_image_modules_B0FLJN5XJW/gallery_vertical.png" alt="B0FLJN5XJW gallery"><div class="cap"><b>B0FLJN5XJW</b><span>SHAPERX · 套图总览</span></div></button></div>
+      <div class="visual"><button onclick="openModal('amazon_image_modules_B0G2RJ1XFR/gallery_vertical.png')"><img src="amazon_image_modules_B0G2RJ1XFR/gallery_vertical.png" alt="B0G2RJ1XFR gallery"><div class="cap"><b>B0G2RJ1XFR</b><span>SHAPELLX · 套图总览</span></div></button></div>
+    </div>
+  </section>
+
+  <section id="strategy" class="section">
+    <div class="head">
+      <div><div class="label">07 · Planning Strategy</div><h2>给新品的企划建议</h2></div>
+      <div class="desc">把四个竞对的优势保留，把它们的差评坑提前堵住。</div>
+    </div>
+    <div class="grid-3">
+      <div class="card blue">
+        <h3>1. 产品定义</h3>
+        <ul class="list">
+          <li>定位为“舒适型塑形上衣 / faja vest”，不是极限 waist trainer。</li>
+          <li>核心承诺：收腰可见、腹部平整、背部支撑、日常可穿。</li>
+          <li>避免“强压迫、快速瘦身、医疗恢复”这类高风险表达。</li>
+        </ul>
+      </div>
+      <div class="card green">
+        <h3>2. 版型与尺码</h3>
+        <ul class="list">
+          <li>首批建议覆盖 XS-3XL，优先补 XS，不建议贸然首批上 4XL。</li>
+          <li>尺码页按腰围、胸下围、罩杯/胸部容量、躯干长度、腹部软肉分区解释。</li>
+          <li>明确“想要强压缩/日常舒适/介于两码”的选择逻辑。</li>
+        </ul>
+      </div>
+      <div class="card orange">
+        <h3>3. 颜色与库存</h3>
+        <ul class="list">
+          <li>黑色仍是主销基础盘，肤色/Tan 承接隐形内穿。</li>
+          <li>粉色有必要，但适合作为副色、小批量、社媒视觉测试色。</li>
+          <li>暖粉优于高饱和粉，命名可用 Warm Pink / Cloud Pink / Blush Pink。</li>
+        </ul>
+      </div>
+    </div>
+    <div class="table-wrap" style="margin-top:14px">
+      <table>
+        <thead><tr><th>页面模块</th><th>建议内容</th><th>要规避的问题</th></tr></thead>
+        <tbody>
+          <tr><td><b>主图</b></td><td>真实模特、清楚腰线、不过度修图；黑色主推，肤色/粉色辅助展示。</td><td>不要只展示极瘦模特或夸张 Before/After。</td></tr>
+          <tr><td><b>A+ 第一屏</b></td><td>解释“有塑形结果但不强压迫”的产品哲学，并用结构图证明支撑来源。</td><td>不要堆 15/23 根钢骨数字而不解释体感差异。</td></tr>
+          <tr><td><b>尺码模块</b></td><td>腰围、胸下围、躯干长度、腹部/背部软肉、介于两码选择逻辑。</td><td>不要只放传统尺码表。</td></tr>
+          <tr><td><b>场景模块</b></td><td>日常内搭、办公久坐、轻运动、产后外观管理，每个场景说明穿着时长和边界。</td><td>不要暗示医疗治疗或快速减脂。</td></tr>
+          <tr><td><b>评论引导</b></td><td>鼓励用户带身高、体重、腰围、所选尺码和穿着场景晒单。</td><td>不要只收集“好看/好用”的泛泛评论。</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout" style="margin-top:14px"><b>最终可汇报结论：</b>新品最优切入点是“舒适型有感塑形”。向 B0DK3G3TGP 学销售盘和颜色层级，向 B0DPBW1T2F 学舒适与性价比口碑，向 B0FLJN5XJW 学页面视觉链路，同时避开 B0G2RJ1XFR 暴露出的偏小、过紧、背部挤肉和评分下滑问题。</div>
+  </section>
+
+  <div class="footer">Generated from local HTML reports, Amazon image modules and review Excel files · 2026-07-21</div>
+</div>
+
+<div class="modal" id="modal">
+  <div class="close">×</div>
+  <div class="modal-toolbar">
+    <button type="button" onclick="setZoom('100')">100%</button>
+    <button type="button" onclick="setZoom('150')">150%</button>
+    <button type="button" onclick="setZoom('200')">200%</button>
+    <a id="modalOpen" href="#" target="_blank" rel="noopener">打开原图</a>
+  </div>
+  <div class="modal-body" onclick="closeModal()">
+    <img id="modalImg" alt="放大图片" onclick="event.stopPropagation()">
+  </div>
+</div>
+<script>
+  function openModal(src){
+    var modal = document.getElementById('modal');
+    document.getElementById('modalImg').src = src;
+    document.getElementById('modalOpen').href = src;
+    modal.className = 'modal show';
+  }
+  function setZoom(level){
+    var modal = document.getElementById('modal');
+    modal.classList.remove('zoom-150','zoom-200');
+    if(level === '150') modal.classList.add('zoom-150');
+    if(level === '200') modal.classList.add('zoom-200');
+  }
+  function closeModal(){
+    document.getElementById('modal').classList.remove('show');
+  }
+  document.querySelector('.close').addEventListener('click', closeModal);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeModal();
+  });
+</script>
+</body>
+</html>

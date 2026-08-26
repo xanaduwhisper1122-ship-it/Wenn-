@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>吉隆坡4天3晚｜第一次去的更合理行程｜2026.09.04-09.07</title>
+<style>
+  :root{
+    --ink:#17342d; --muted:#63726d; --line:#dfe8e3; --paper:#f7f4ed; --card:#ffffff;
+    --green:#0f6b50; --green2:#2f8d6c; --teal:#167f87; --orange:#dc8c22; --red:#b84a3d;
+    --blue:#3478a8; --lav:#7d6bb3; --shadow:0 12px 34px rgba(31,70,56,.10);
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,#f5f2e9 0,#fbfaf7 340px,#f6f7f4 100%);line-height:1.62}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1160px;margin:auto;padding:24px 22px 64px}
+  .hero{position:relative;overflow:hidden;border:1px solid #e8e4d9;background:radial-gradient(circle at 88% 10%,rgba(52,120,168,.15),transparent 31%),radial-gradient(circle at 5% 70%,rgba(15,107,80,.13),transparent 28%),#fffdf8;border-radius:30px;padding:44px 46px 36px;box-shadow:var(--shadow)}
+  .hero:before,.hero:after{content:"";position:absolute;border-radius:999px;filter:blur(.2px);opacity:.45}
+  .hero:before{width:240px;height:240px;background:#d9eee5;left:-100px;top:-120px}.hero:after{width:210px;height:210px;background:#f6dfb8;right:-90px;bottom:-110px}
+  .kicker{display:inline-flex;gap:8px;align-items:center;border-radius:999px;background:#edf6f1;color:var(--green);padding:7px 12px;font-weight:750;font-size:13px;letter-spacing:.02em}
+  h1{font-size:clamp(32px,5vw,58px);line-height:1.08;margin:18px 0 12px;letter-spacing:-.04em}
+  .sub{font-size:17px;color:#4f625b;max-width:850px;margin:0 0 24px}
+  .hero-grid{display:grid;grid-template-columns:1.4fr .9fr;gap:18px;position:relative;z-index:2}
+  .route-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:26px}
+  .route-day{background:#fff;border:1px solid #e5e9e5;border-radius:16px;padding:12px 13px;min-height:96px}
+  .route-day b{display:block;font-size:14px;color:var(--green);margin-bottom:5px}.route-day span{font-size:13px;color:#56655f}
+  .summary-box{background:rgba(255,255,255,.86);border:1px solid #e2e9e5;border-radius:20px;padding:18px 19px}
+  .summary-box h3{margin:0 0 10px;font-size:17px}.summary-box p{margin:0;color:#53645d;font-size:14px}
+  .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}.tag{font-size:12px;font-weight:700;border-radius:999px;padding:5px 9px;background:#f1f4f2;color:#486158;border:1px solid #dce5e0}.tag.keep{background:#e9f4ee;color:#116445}.tag.add{background:#eaf3fa;color:#28648d}.tag.opt{background:#fff4df;color:#a46712}
+  nav{position:sticky;top:0;z-index:20;margin:18px 0 28px;background:rgba(248,249,246,.9);backdrop-filter:blur(12px);border:1px solid #dfe7e2;border-radius:18px;padding:10px;display:flex;gap:8px;flex-wrap:wrap;box-shadow:0 8px 20px rgba(25,70,55,.06)}
+  nav a{padding:7px 11px;border-radius:10px;font-weight:700;font-size:13px;color:#486159}nav a:hover{background:#e9f3ee;color:var(--green)}
+  section{margin-top:36px}.section-title{display:flex;align-items:center;gap:12px;margin-bottom:16px}.num{width:38px;height:38px;border-radius:12px;background:var(--green);color:white;display:grid;place-items:center;font-weight:850;box-shadow:0 6px 14px rgba(15,107,80,.18)}
+  h2{font-size:27px;margin:0;letter-spacing:-.02em}.lead{color:var(--muted);font-size:14px;margin:3px 0 0}
+  .logic{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.logic-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:0 7px 20px rgba(25,70,55,.05)}.logic-card b{display:block;margin-bottom:6px}.logic-card p{margin:0;color:#5c6e67;font-size:14px}
+  .day{background:var(--card);border:1px solid #dfe7e2;border-radius:26px;overflow:hidden;box-shadow:var(--shadow);margin:22px 0 30px}.day-head{padding:22px 24px;color:white;display:grid;grid-template-columns:1fr auto;gap:16px;align-items:end}.d1 .day-head{background:linear-gradient(120deg,#156c52,#3a9272)}.d2 .day-head{background:linear-gradient(120deg,#126f78,#258da0)}.d3 .day-head{background:linear-gradient(120deg,#8a6c2b,#d28d2a)}.d4 .day-head{background:linear-gradient(120deg,#bd701e,#e6a437)}
+  .day-head h3{font-size:26px;margin:0}.day-head p{margin:4px 0 0;opacity:.92;font-size:14px}.day-head .stamp{font-size:13px;font-weight:800;border:1px solid rgba(255,255,255,.38);padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.12)}
+  .timeline{padding:8px 22px 20px}.slot{display:grid;grid-template-columns:116px minmax(240px,1.15fr) minmax(210px,.9fr) minmax(220px,1fr);gap:14px;padding:18px 2px;border-bottom:1px dashed #dce5e0;align-items:start}.slot:last-child{border-bottom:none}.time{font-size:14px;font-weight:850;color:var(--green)}.time small{display:block;font-weight:600;color:#82908b;margin-top:2px}.place h4{margin:0 0 5px;font-size:17px}.place p,.why p,.note p{margin:0;color:#596b64;font-size:13.5px}.label{display:inline-block;font-size:11px;font-weight:800;padding:3px 7px;border-radius:999px;margin:0 4px 7px 0}.keep{background:#e8f4ed;color:#116448}.new{background:#eaf3fb;color:#2e678e}.option{background:#fff1d7;color:#9e6411}.must{background:#feeceb;color:#a04439}.free{background:#eef6f3;color:#2e705b}.budget{background:#f2eef9;color:#6b5794}
+  .why,.note{border-left:3px solid #dbe6e0;padding-left:12px}.why b,.note b{display:block;font-size:12px;letter-spacing:.04em;color:#39574d;margin-bottom:4px}.note.warn{border-left-color:#efc2b8}.note.warn b{color:var(--red)}
+  .mapbtn{display:inline-flex;margin-top:7px;font-size:12px;color:#1b6d57;font-weight:750;border-bottom:1px dashed #8bb7a8}.transport{font-size:12px;color:#7a8883;margin-top:5px}
+  .decision{display:grid;grid-template-columns:1.15fr .85fr;gap:16px}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:20px;box-shadow:0 6px 18px rgba(25,70,55,.05)}.panel h3{margin:0 0 10px;font-size:18px}.panel ul{margin:8px 0 0;padding-left:20px}.panel li{margin:7px 0;color:#566861;font-size:14px}.swap{border-left:4px solid var(--orange)}
+  .budget-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.money{background:#fff;border:1px solid var(--line);border-radius:18px;padding:17px}.money b{display:block;font-size:22px;color:var(--green);margin-top:2px}.money span{font-size:12px;color:#6b7a75}.money p{margin:8px 0 0;color:#586a63;font-size:13px}
+  .checklist{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.check{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px}.check h3{font-size:16px;margin:0 0 8px}.check ul{list-style:none;margin:0;padding:0}.check li{position:relative;padding:6px 0 6px 26px;color:#53675f;font-size:14px}.check li:before{content:"✓";position:absolute;left:0;top:5px;width:18px;height:18px;border-radius:50%;background:#e8f4ed;color:#12694c;font-weight:900;display:grid;place-items:center;font-size:11px}
+  .sources{background:#f0f5f2;border:1px solid #dbe7e0;border-radius:22px;padding:20px}.sources ol{margin:10px 0 0;padding-left:20px}.sources li{font-size:13px;color:#52675f;margin:8px 0}.sources a{color:#176b53;text-decoration:underline;text-underline-offset:2px}.fine{font-size:12px;color:#78857f;margin-top:14px}
+  .footer{text-align:center;color:#7a8883;font-size:12px;padding:30px 0 0}
+  @media(max-width:920px){.hero-grid{grid-template-columns:1fr}.route-strip,.logic,.budget-grid{grid-template-columns:repeat(2,1fr)}.slot{grid-template-columns:90px 1fr}.why,.note{grid-column:2}.decision{grid-template-columns:1fr}}
+  @media(max-width:620px){.wrap{padding:12px 10px 46px}.hero{padding:28px 20px;border-radius:22px}.route-strip,.logic,.budget-grid,.checklist{grid-template-columns:1fr}.slot{grid-template-columns:1fr;gap:7px;padding:15px 2px}.why,.note{grid-column:auto}.time{display:flex;gap:8px;align-items:center}.time small{display:inline}.day-head{grid-template-columns:1fr}.timeline{padding:5px 16px 18px}nav{position:relative;top:auto}h1{font-size:37px}}
+  @media print{body{background:white}.wrap{max-width:none;padding:0}.hero,.day,.panel,.money,.check,.sources{box-shadow:none}.day{break-inside:avoid-page}nav{display:none}a{text-decoration:none}.hero{border-radius:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hero" id="top">
+    <span class="kicker">🇲🇾 FIRST-TIMER ROUTE · 2026.09.04–09.07</span>
+    <h1>吉隆坡 4天3晚<br>第一次去，更合理的行程</h1>
+    <p class="sub">按你们 <b>9/4 早上抵达、9/7 下午返程、住在 Bukit Bintang 的京华心悦大酒店</b> 重新排线。核心原则不是“塞满”，而是把同一区域放在一起，避开最晒/最挤时段，并给红眼航班后的第一天和中午都留出恢复时间。</p>
+    <div class="hero-grid">
+      <div>
+        <div class="route-strip">
+          <div class="route-day"><b>9/4 周五｜老城 + 休息</b><span>KLIA2 → 酒店 → 茨厂街/中央市场 → 午休 → 阿罗街</span></div>
+          <div class="route-day"><b>9/5 周六｜经典地标</b><span>黑风洞 → 海脚人/TRX → 午休 → Pavilion → KLCC → Saloma Link</span></div>
+          <div class="route-day"><b>9/6 周日｜布城 + 自然</b><span>粉红清真寺 → 布城湖游船 → KL Bird Park → 自由晚餐</span></div>
+          <div class="route-day"><b>9/7 周一｜返程</b><span>酒店附近早餐 → 退房 → 按更早航班倒推去 KLIA2</span></div>
+        </div>
+        <div class="tags">
+          <span class="tag keep">保留原计划大多数核心点</span>
+          <span class="tag add">新增：茨厂街 / KLCC喷泉 / 布城湖游船</span>
+          <span class="tag opt">可随体力删减，不会破坏主线</span>
+        </div>
+      </div>
+      <aside class="summary-box">
+        <h3>我为什么这样改？</h3>
+        <p>你们只有 <b>2个完整白天 + 2个半天</b>。原计划最大问题是 9/6 把 Bird Park、Butterfly Park、布城、水上活动叠在一起，容易变成一直赶路。新版把“必看”与“可替换”分开，并让夜景只集中在一晚。</p>
+      </aside>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#logic">路线逻辑</a><a href="#d1">9/4</a><a href="#d2">9/5</a><a href="#d3">9/6</a><a href="#d4">9/7</a><a href="#cuts">删减说明</a><a href="#budget">预算</a><a href="#tips">注意事项</a><a href="#sources">核实来源</a>
+  </nav>
+
+  <section id="logic">
+    <div class="section-title"><span class="num">1</span><div><h2>路线逻辑</h2><p class="lead">第一次去，优先覆盖“老城文化 / 印度教地标 / 现代城市夜景 / 布城建筑与自然”四种体验。</p></div></div>
+    <div class="logic">
+      <div class="logic-card"><b>① 酒店位置很好</b><p>酒店官方信息显示，步行约 5 分钟可到 Bukit Bintang MRT / Imbi Monorail，Pavilion 等商场也在 5–10 分钟步行圈，因此市中心不需要反复打车。</p></div>
+      <div class="logic-card"><b>② 早上去黑风洞</b><p>272级台阶暴露在户外。马来西亚旅游局也建议想避开人群可在 8:00 前到；周六更应该早去。</p></div>
+      <div class="logic-card"><b>③ 夜景只放一晚</b><p>9/5 日落约 19:16，把 Pavilion、双子塔、KLCC 喷泉、Saloma Link 连起来，既顺路又能从白天拍到蓝调与夜景。</p></div>
+      <div class="logic-card"><b>④ 9/6 不再塞蝴蝶园</b><p>Bird Park 已经需要约 2.5–3 小时；再加 Butterfly Park 会压缩布城。蝴蝶园改成“替换项”，而不是“加项”。</p></div>
+    </div>
+  </section>
+
+  <section id="d1">
+    <div class="day d1">
+      <div class="day-head"><div><h3>9/4 周五｜抵达 + 老城轻量线</h3><p>重点：不要把第一天当完整旅游日。先完成入境、吃饭、寄存、逛一小片，15:00 后一定留休息。</p></div><span class="stamp">体力强度 ★★☆☆☆</span></div>
+      <div class="timeline">
+        <div class="slot">
+          <div class="time">07:20–10:30<small>弹性窗口</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><h4>KLIA2 入境 + Hometown Hainan Coffee</h4><p>你们两个航班方案分别约 07:20 / 09:10 落地。出关、取行李后，若饿就在 T2 到达层吃海南咖啡早餐。</p><span class="mapbtn">T2 到达层 L2 · 24小时营业（已核实）</span></div>
+          <div class="why"><b>为什么这样排</b><p>餐厅就在 KLIA2 到达层，省掉进城后再找早餐的时间。航班晚点也不影响后续。</p></div>
+          <div class="note"><b>注意</b><p>MDAC 提前填好；入境、取行李按 60–90 分钟预留。不要在机场换大量现金，只换少量备用，主要用银行卡/电子支付。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">10:30–12:00<small>按实际落地顺延</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><span class="label budget">约 RMB 119 / 3人*</span><h4>KLIA2 → 酒店，先寄存行李</h4><p>建议继续用你们已经考虑的机场接送/去哪儿专车；3人+行李比中途换乘更省心。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hotel+Royal+Signature+Kuala+Lumpur">打开酒店地图</a></div>
+          <div class="why"><b>为什么这样排</b><p>酒店标准入住约 15:00；官方位置在 Bukit Bintang 核心，先把大行李丢下，之后市区轻装走。</p></div>
+          <div class="note warn"><b>避免踩坑</b><p>吉隆坡有名字很像的 Hotel Royal Kuala Lumpur。打车时认准 <b>Hotel Royal Signature / 21 Jalan Bukit Bintang</b>。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">12:00–14:35<small>同一区域步行</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><span class="label new">新增顺路点</span><h4>Ho Kow 海南茶室 → 茨厂街 → Central Market</h4><p>12:00–13:00 午餐；13:00–13:40 茨厂街走一圈；13:45–14:35 中央市场吹空调、买小纪念品。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Central+Market+Kuala+Lumpur">Central Market 地图</a></div>
+          <div class="why"><b>为什么这样排</b><p>Ho Kow、茨厂街、中央市场都在老城区，组合起来比“吃完再跨城”合理；Central Market 10:00–22:00，下午进去也更凉快。</p></div>
+          <div class="note"><b>注意</b><p>第一天不要强行再走独立广场。若航班晚/排队久，直接删掉茨厂街，只吃饭 + Central Market 即可。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">15:00–17:30<small>必须留白</small></div>
+          <div class="place"><span class="label must">强烈建议</span><h4>回酒店 Check-in + 补觉</h4><p>至少休息 2 小时，洗澡、充电、整理第二天衣服。</p></div>
+          <div class="why"><b>为什么这样排</b><p>你们是凌晨/清晨航班。如果把第一天排满，通常第二天黑风洞早起会直接崩盘。</p></div>
+          <div class="note"><b>注意</b><p>设置闹钟到 17:30 左右，不建议一觉睡到晚上 9 点，避免时差/作息继续乱。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">18:00–20:30<small>步行为主</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><h4>Bukit Bintang 随便逛 → Jalan Alor 阿罗街晚餐</h4><p>酒店就在附近，第一晚只做“吃饭 + 感受城市”。Dury Dury Durian / Canteen Malaya / Baan Thai 都改成备选，不强制打卡。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Jalan+Alor+Kuala+Lumpur">Jalan Alor 地图</a></div>
+          <div class="why"><b>为什么这样排</b><p>从酒店步行即可，随时能撤退。相比第一晚再跑双子塔，恢复价值更高。</p></div>
+          <div class="note"><b>注意</b><p>夜市人多，手机和包放身体前侧；路边摊先看价格再点，海鲜按重量计价时尤其要确认。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="d2">
+    <div class="day d2">
+      <div class="day-head"><div><h3>9/5 周六｜黑风洞 + TRX + KLCC 夜景</h3><p>重点：最晒的户外放早上；周六商场与 KLCC 会越来越挤，所以午后回酒店休息，傍晚再出发。</p></div><span class="stamp">体力强度 ★★★★☆</span></div>
+      <div class="timeline">
+        <div class="slot">
+          <div class="time">06:55–09:20<small>07:00 左右出发</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><span class="label free">主洞免费</span><h4>Batu Caves 黑风洞</h4><p>07:30 前后到，先拍金色 Murugan 神像，再爬 272 级彩虹阶梯与主洞；09:15 左右离开。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Batu+Caves">黑风洞地图</a></div>
+          <div class="why"><b>为什么这么早</b><p>旅游局建议想避开人群在 08:00 前到。周六越晚越热、游客越多，早去体验会好很多。</p></div>
+          <div class="note warn"><b>重要注意</b><p>肩膀、膝盖尽量遮住；带水、防晒。不要把食物/塑料袋晃在猴子面前，眼镜和手机别随手放栏杆。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">09:50–13:20<small>早餐 + 商场</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><h4>Hai Kah Lang 海脚人 · TRX → The Exchange TRX</h4><p>09:50–10:50 海鲜面早午餐；11:00–13:20 The Exchange TRX + 屋顶 City Park。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Hai+Kah+Lang+TRX">海脚人 TRX 地图</a></div>
+          <div class="why"><b>为什么接这里</b><p>海脚人 TRX 官方营业 08:00–02:00；吃完再进 10:00 开门的 TRX，时间正好，而且从黑风洞回市区顺路。</p></div>
+          <div class="note"><b>注意</b><p>TRX 很大，不要为了“逛完”耗 4 小时。目标只放：吃饭、随便逛、City Park 拍照，13:20 左右撤。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">14:00–16:30<small>酒店恢复</small></div>
+          <div class="place"><span class="label must">强烈建议</span><h4>回酒店休息</h4><p>把中午最热的时段变成休息窗口，换衣服、补妆、充电。</p></div>
+          <div class="why"><b>为什么不是继续逛</b><p>真正的“第一次吉隆坡记忆点”在傍晚后的 KLCC。把体力留给夜景，比多逛一家商场值。</p></div>
+          <div class="note"><b>注意</b><p>如果想登双子塔观景台，建议提前订 17:30–18:00 左右的定时票；官方要求至少提前 15 分钟到，错过时段可能不能进。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">16:45–18:25<small>步行 10 分钟左右</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><h4>Pavilion Kuala Lumpur</h4><p>从酒店步行过去，逛 60–90 分钟，顺便早一点吃东西或喝咖啡。</p></div>
+          <div class="why"><b>为什么傍晚来</b><p>酒店官方标注 Pavilion 在约 5–10 分钟步行范围；商场每日约 10:00–22:00。傍晚来正好接 KLCC，不需要上午专门再跑一趟。</p></div>
+          <div class="note"><b>注意</b><p>Pavilion 很大，约好集合点；之后尽量走 Pavilion–KLCC 的连廊，避免在高峰时段反复叫车。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">18:25–20:15<small>日落约 19:16</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><span class="label new">新增喷泉</span><h4>Petronas Twin Towers → KLCC Park → Lake Symphony</h4><p>18:45 左右到 KLCC，先拍天亮/蓝调；19:16 日落后等灯亮；20:00 看一场音乐灯光喷泉。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Petronas+Twin+Towers">双子塔地图</a></div>
+          <div class="why"><b>为什么这个时间</b><p>9/5 日落约 19:16，一次可以拍到白天→蓝调→亮灯。Suria KLCC 官方列出 20:00、20:30、21:00 等音乐灯光秀。</p></div>
+          <div class="note"><b>可选升级</b><p>如登塔：双子塔观景参观 2026 年周二至周日开放，属于定时票制。若只想拍照，外部 + KLCC Park 已足够。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">20:25–21:10<small>夜景步行</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><h4>Saloma Link 夜景</h4><p>从 KLCC 一带步行/短途 Grab 去 Saloma Link，拍桥体灯光与双子塔方向。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Saloma+Link+Bridge">Saloma Link 地图</a></div>
+          <div class="why"><b>为什么放最后</b><p>Saloma Link 的价值就是夜景。把它放在 KLCC 后面，不需要另开一个晚上。</p></div>
+          <div class="note"><b>晚餐选择</b><p>若晚餐还没吃：肥肥蟹可作为“想专门吃海鲜”的选项；如果累，直接回酒店周边吃，不要为了餐厅再绕远。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="d3">
+    <div class="day d3">
+      <div class="day-head"><div><h3>9/6 周日｜布城建筑 + Bird Park</h3><p>这一天我保留了你朋友计划里最有辨识度的“粉红清真寺 + Bird Park”，但把 Butterfly Park 与水上活动从主线拿掉。</p></div><span class="stamp">体力强度 ★★★☆☆</span></div>
+      <div class="timeline">
+        <div class="slot">
+          <div class="time">07:50–09:00<small>Grab 出发</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><h4>酒店 → Putrajaya 布城</h4><p>08:00 左右离开市中心，尽量 09:00 到粉红清真寺附近。</p></div>
+          <div class="why"><b>为什么先去布城</b><p>上午温度相对舒服，粉红清真寺也更适合拍建筑。下午再回市中心，晚上不再安排远距离移动。</p></div>
+          <div class="note"><b>交通</b><p>3人同行直接 Grab 最省换乘。若遇高峰，可用 KLIA Transit 到 Putrajaya & Cyberjaya 再打车。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">09:00–10:00<small>宗教场所</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><span class="label free">免费</span><h4>Putra Mosque 布特拉清真寺（粉红清真寺）</h4><p>先拍外观与湖景，再进可开放区域参观。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Putra+Mosque">粉红清真寺地图</a></div>
+          <div class="why"><b>为什么 09:00</b><p>马来西亚旅游局给出的游客开放时间为周六至周四 09:00–18:00；9/6 是周日，早上直接去最稳。</p></div>
+          <div class="note warn"><b>着装 / 礼仪</b><p>肩、手臂、腿要覆盖；女性需遮头发。现场通常可借袍。进祈祷厅脱鞋，祈祷时段可能临时限制游客进入。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">10:10–11:00<small>推荐新增</small></div>
+          <div class="place"><span class="label new">新增建议</span><span class="label budget">约 RM30 / 成人*</span><h4>Putrajaya Lake Cruise 布城湖游船</h4><p>从 Putra Jetty 出发，标准观光船约 45 分钟，从水面看清真寺、桥梁和行政建筑。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=Putra+Jetty+Putrajaya">Putra Jetty 地图</a></div>
+          <div class="why"><b>为什么替代水上乐园</b><p>你们是第一次来且时间有限，游船能用 45 分钟覆盖布城最有代表性的城市景观；比跑分散的 Water Safety Park / Taman Lembah Tasik 更高效。</p></div>
+          <div class="note"><b>注意</b><p>官网信息显示日间航次会受天气与季节影响，建议当天早上再确认班次。暴雨就直接取消，不影响主线。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">11:05–12:10<small>轻松收尾</small></div>
+          <div class="place"><span class="label new">顺路</span><h4>Putra Square + 湖边短走 + 午餐</h4><p>不再加远距离点。附近走走、吃午餐，12:10 左右离开布城。</p></div>
+          <div class="why"><b>为什么不继续“打卡”</b><p>下午还要回 KL Bird Park。把布城控制在 3 小时左右，体验完整但不过量。</p></div>
+          <div class="note"><b>注意</b><p>中午日晒强，尽量在建筑阴影/室内吃饭，不要在湖边暴走。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">13:00–16:05<small>回吉隆坡</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><span class="label budget">外籍成人 RM90*</span><h4>KL Bird Park 吉隆坡飞禽公园</h4><p>13:00 入园 → 14:30 老鹰喂食（Zone 1）→ 15:30 Bird Show（Zone 4）→ 16:05 左右离开。</p><a class="mapbtn" target="_blank" href="https://www.google.com/maps/search/?api=1&query=KL+Bird+Park">KL Bird Park 地图</a></div>
+          <div class="why"><b>为什么下午去</b><p>官方节目表下午有 14:30 喂鹰和 15:30 Bird Show，正好形成明确节奏；不用早上同时挤 Bird Park + Butterfly Park。</p></div>
+          <div class="note"><b>注意</b><p>官方现行开放时间 09:00–17:30；下雨仍可入园但体验会下降，带轻便雨具。无园内接驳车，鞋一定要舒服。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">16:30–晚上<small>不再加景点</small></div>
+          <div class="place"><span class="label option">自由选择</span><h4>回酒店休息 → 最后一晚吃想吃的</h4><p>把 Dury Dury Durian / Canteen Malaya / 肥肥蟹 / Baan Thai 放到这里按食欲、排队、距离四选一。</p></div>
+          <div class="why"><b>为什么不固定</b><p>前三天的体力和天气不可预测，最后一晚保留弹性比硬排“必吃”更舒服。</p></div>
+          <div class="note"><b>建议</b><p>如果 9/5 已经很累，9/6 下午可直接删 Bird Park，布城结束后回酒店。行程依然完整。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="d4">
+    <div class="day d4">
+      <div class="day-head"><div><h3>9/7 周一｜返程日，不排远景点</h3><p>按你们更早的 15:55 航班倒推。如果最后选的是 18:00 的 CZ8302，可以把上午整体向后延约 1.5–2 小时。</p></div><span class="stamp">体力强度 ★☆☆☆☆</span></div>
+      <div class="timeline">
+        <div class="slot">
+          <div class="time">08:30–10:15<small>酒店周边</small></div>
+          <div class="place"><span class="label option">轻松</span><h4>睡够 + Bukit Bintang 早餐 / 最后补买</h4><p>不去新景点。缺什么就在酒店步行圈解决；也可睡到 09:00 再出门。</p></div>
+          <div class="why"><b>为什么不安排景点</b><p>返程日最怕塞车、退税/安检排队、行李问题。上午“空”下来，旅行结束体验更稳定。</p></div>
+          <div class="note"><b>提醒</b><p>检查护照、充电宝、液体、退税/购物小票、房间保险箱、转换头。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">10:30–11:45<small>退房</small></div>
+          <div class="place"><span class="label must">关键节点</span><h4>回酒店整理 + 退房</h4><p>建议 11:30 前把人和行李全部收齐，预留 15 分钟处理前台。</p></div>
+          <div class="why"><b>为什么提前</b><p>不把“找东西、等电梯、等车”挤进最后 20 分钟。</p></div>
+          <div class="note"><b>注意</b><p>叫车地址仍确认是 Hotel Royal Signature，不要误选同名 Hotel Royal Kuala Lumpur。</p></div>
+        </div>
+        <div class="slot">
+          <div class="time">12:00–13:00<small>按早班航班</small></div>
+          <div class="place"><span class="label keep">原计划保留</span><span class="label budget">约 RMB 119 / 3人*</span><h4>酒店 → KLIA2</h4><p>继续用预约专车 / 机场接送，避免多人带行李换乘。</p></div>
+          <div class="why"><b>为什么 12:00 就走</b><p>以 15:55 AK122 为基准，13:00 左右到机场，留约 3 小时完成托运、安检与步行到登机口。</p></div>
+          <div class="note warn"><b>如果坐 18:00 CZ8302</b><p>可改成 13:30–14:00 离酒店，但不要因此再去跨城区景点。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cuts">
+    <div class="section-title"><span class="num">2</span><div><h2>原计划哪些保留，哪些我建议降级？</h2><p class="lead">不是“删景点”，而是把低收益的移动和重复体验拿掉。</p></div></div>
+    <div class="decision">
+      <div class="panel">
+        <h3>✅ 主线保留（超过原计划一半）</h3>
+        <ul>
+          <li>Hometown Hainan Coffee、Ho Kow Hainam Kopitiam、Central Market、Jalan Alor</li>
+          <li>Batu Caves、Hai Kah Lang TRX、The Exchange TRX</li>
+          <li>Pavilion Kuala Lumpur、Petronas Twin Towers、Saloma Link</li>
+          <li>Putra Mosque、KL Bird Park</li>
+          <li>肥肥蟹 / Dury Dury Durian / Canteen Malaya / Baan Thai 作为灵活餐饮备选</li>
+        </ul>
+      </div>
+      <div class="panel swap">
+        <h3>↔️ 建议替换 / 降级</h3>
+        <ul>
+          <li><b>KL Butterfly Park：</b>不与 Bird Park 同天硬加；如果特别喜欢蝴蝶，就用它替换 Bird Park，别两个都去。</li>
+          <li><b>Putrajaya Water Safety Park / Taman Lembah Tasik：</b>第一次去优先改成 45 分钟湖上游船，景观密度更高。</li>
+          <li><b>Golden Triangle KL：</b>它本身是区域概念，已并入 Pavilion → KLCC → Saloma Link 的路线，不需要单独打卡。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="budget">
+    <div class="section-title"><span class="num">3</span><div><h2>关键预算（先看固定项）</h2><p class="lead">不含餐饮、购物与实时 Grab 波动。*带星号的金额为你朋友原始估算或当前公开参考，出发前再确认。</p></div></div>
+    <div class="budget-grid">
+      <div class="money"><span>黑风洞主洞</span><b>RMB 0</b><p>Temple Cave / Cathedral Cave 目前公开信息为免费；侧洞另收费。</p></div>
+      <div class="money"><span>布特拉清真寺</span><b>RMB 0</b><p>游客免费，重点是着装与避开祈祷时段。</p></div>
+      <div class="money"><span>布城湖观光船</span><b>约 RM 30 / 人*</b><p>MyPutrajaya 当前页面标示标准观光船约 45 分钟。</p></div>
+      <div class="money"><span>KL Bird Park</span><b>RM 90 / 成人*</b><p>官方现行外籍成人标准票价。儿童/本地票不同。</p></div>
+      <div class="money"><span>机场接送</span><b>约 RMB 119 / 3人*</b><p>来自你朋友的预估；去程、返程各一次。</p></div>
+      <div class="money"><span>黑风洞 Grab</span><b>约 RM 20–35 / 车*</b><p>你朋友记录约 RM20；周末、高峰与上车点会浮动。</p></div>
+      <div class="money"><span>双子塔外观 + KLCC喷泉</span><b>RMB 0</b><p>若登观景台需另购定时票，建议只从官方票务渠道买。</p></div>
+      <div class="money"><span>Saloma Link</span><b>RMB 0</b><p>步行桥夜景本身无需门票。</p></div>
+    </div>
+  </section>
+
+  <section id="tips">
+    <div class="section-title"><span class="num">4</span><div><h2>第一次去，真正有用的注意事项</h2><p class="lead">比“带不带某件衣服”更影响体验的，是时间、着装、交通与体力。</p></div></div>
+    <div class="checklist">
+      <div class="check"><h3>🕌 宗教场所</h3><ul><li>黑风洞与粉红清真寺都尽量遮肩、遮膝。</li><li>进入清真寺女性需遮头发，现场通常可借袍。</li><li>不要在祈祷者正前方拍照；进祈祷厅按现场要求脱鞋。</li></ul></div>
+      <div class="check"><h3>🐒 黑风洞</h3><ul><li>不要手拿零食、塑料袋逗猴子。</li><li>272级台阶，鞋底防滑比穿得好看更重要。</li><li>07:30 左右到，防晒和水都带上。</li></ul></div>
+      <div class="check"><h3>🚕 交通</h3><ul><li>市区优先 Grab；3人带行李的机场段继续用预约专车。</li><li>酒店名字相近，司机页面确认 Hotel Royal Signature。</li><li>商场间能步行/连廊就别在晚高峰叫车。</li></ul></div>
+      <div class="check"><h3>🌧️ 天气与体力</h3><ul><li>轻便雨伞/雨衣、防晒、饮用水常备。</li><li>中午 14:00–16:30 尽量安排商场/酒店休息。</li><li>任何一天累了，优先删“可选”，不要删休息。</li></ul></div>
+      <div class="check"><h3>📱 入境与手机</h3><ul><li>MDAC 在入境前三天内填写并保存确认信息。</li><li>护照首页、签证/入境信息留电子备份。</li><li>准备移动数据；Grab 叫车定位比文字地址更可靠。</li></ul></div>
+      <div class="check"><h3>🛍️ 周末节奏</h3><ul><li>9/5、9/6 都是周末，TRX、Pavilion、KLCC 晚上会更拥挤。</li><li>购物不是主线，设离场时间，不然很容易把夜景拖没。</li><li>餐厅排队太长直接换，吉隆坡不值得为一顿饭排 1 小时。</li></ul></div>
+    </div>
+  </section>
+
+  <section id="sources">
+    <div class="section-title"><span class="num">5</span><div><h2>我核实过的公开信息</h2><p class="lead">核实日期：2026-08-26。开放时间、票价、班次仍可能临时调整，建议出发前 24–48 小时再点开确认。</p></div></div>
+    <div class="sources">
+      <ol>
+        <li><a target="_blank" href="https://hotelroyalsignature.com/location/">Hotel Royal Signature 官方 Location</a>：Bukit Bintang 位置、步行至轨道交通约 5 分钟、Pavilion 等约 5–10 分钟。</li>
+        <li><a target="_blank" href="https://gatewayklia2.com.my/directory/store.aspx?c=4&f=2&tid=39">gateway@klia2 · Hometown Hainan Coffee</a>：T2 到达层 L2，24 小时。</li>
+        <li><a target="_blank" href="https://centralmarket.com.my/">Central Market 官方</a>：每日 10:00–22:00；与 Petaling Street / Merdeka Square 距离近。</li>
+        <li><a target="_blank" href="https://www.malaysia.travel/index.php/explore/batu-caves">Tourism Malaysia · Batu Caves</a>：272级台阶、建议 08:00 前避人流、猴子提醒。</li>
+        <li><a target="_blank" href="https://www.malaysia.travel/explore/4-top-cultural-destinations-in-selangor">Tourism Malaysia · Selangor Cultural Destinations</a>：黑风洞当前开放时间与主洞免费信息（票价信息截至 2026-05）。</li>
+        <li><a target="_blank" href="https://www.haikahlang.com/contact-us/">Hai Kah Lang 官方</a>：TRX 店 08:00–02:00。</li>
+        <li><a target="_blank" href="https://www.petronastwintowers.com.my/plan-your-visit/admission-ticketing/">PETRONAS Twin Towers 官方</a>：2026参观日历、定时票、提前 15 分钟到场要求。</li>
+        <li><a target="_blank" href="https://www.suriaklcc.com.my/attractions/esplanade-lake-symphony/">Suria KLCC · Lake Symphony 官方</a>：音乐灯光喷泉时刻。</li>
+        <li><a target="_blank" href="https://www.timeanddate.com/sun/malaysia/kuala-lumpur?month=9">Timeanddate · Kuala Lumpur 2026年9月日落</a>：9/5 日落约 19:16。</li>
+        <li><a target="_blank" href="https://www.malaysia.travel/explore/putra-mosque">Tourism Malaysia · Putra Mosque</a>：游客开放时间、免费入场、着装与礼仪。</li>
+        <li><a target="_blank" href="https://www.myputrajaya.com/lake-cruise-details">MyPutrajaya · Lake Cruise</a>：日间航次约 10:00–18:30、标准观光约45分钟、当前页面票价参考。</li>
+        <li><a target="_blank" href="https://www.klbirdpark.com/plan-your-visit/">KL Bird Park 官方</a>：09:00–17:30、外籍成人标准票 RM90、喂食/鸟秀时间。</li>
+      </ol>
+      <p class="fine">说明：餐厅排队、Grab价格、天气、宗教场所临时管制等实时因素无法提前锁死。HTML里把这些都做成了“弹性窗口”，这是我认为比精确到每5分钟更可靠的排法。</p>
+    </div>
+  </section>
+
+  <div class="footer">Made for a first Kuala Lumpur trip · 以舒服、顺路、可执行为第一优先级</div>
+</div>
+</body>
+</html>

@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>美国大码女性塑身衣用户洞察｜高可视化企划报告 V3</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>美国大码女性塑身衣用户洞察 × Nebility 用户画像｜高可视化企划报告 V4</title>
 <style>
 :root{
   --bg:#f3f4f6; --card:#ffffff; --text:#23262c; --muted:#6b717a; --line:#e5e8ec;
@@ -258,451 +260,714 @@ tr:last-child td{border-bottom:none}
 @media print{
   .topbar{display:none}.wrap{padding:0;max-width:none}.hero,.card{box-shadow:none}.section{page-break-inside:avoid}
 }
+
+.brand-proof{display:grid;grid-template-columns:1.25fr .75fr;gap:16px;margin-top:26px;position:relative;z-index:2}
+.brand-proof-main{background:rgba(255,255,255,.8);border:1px solid rgba(255,255,255,.94);border-radius:24px;padding:21px 23px}
+.brand-proof-main>strong{display:block;font-size:18px;line-height:1.5;margin-top:9px}
+.brand-proof-main p{font-size:12px!important;color:#686e76!important;margin-top:8px!important}
+.n-badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#24282e;color:#fff;font-size:10px;font-weight:800;letter-spacing:.05em}
+.brand-proof-side{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.brand-proof-side div{background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.94);border-radius:17px;padding:13px}
+.brand-proof-side b{display:block;font-size:13px}.brand-proof-side span{font-size:10px;color:#6e747c}
+.hero-note{position:relative;z-index:2;margin-top:12px;font-size:10px;color:#7b8087}
+.n-strip{margin-top:16px;padding:15px 17px;border-radius:18px;background:#252930;color:#fff;display:grid;grid-template-columns:180px 1fr;gap:16px;align-items:center}
+.n-strip b{font-size:13px}.n-strip p{margin:0;color:#d7dbe0;font-size:11px}
+.n-data-tag{display:inline-block;padding:4px 7px;border-radius:999px;background:#e9ddd1;color:#725a48;font-size:9px;font-weight:800;margin-left:5px}
+.metric-bars{display:grid;gap:10px}
+.metric-row{display:grid;grid-template-columns:150px 1fr 58px;gap:10px;align-items:center}
+.metric-row b{font-size:11px}
+.metric-track{height:10px;background:#eef0f2;border-radius:999px;overflow:hidden}
+.metric-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,#bea48d,#d9c7b8)}
+.metric-row span{font-size:10px;color:#6c727a;text-align:right}
+.dual-data{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.data-panel{padding:20px;border-radius:22px;border:1px solid var(--line);background:#fff}
+.data-panel h3{font-size:14px;margin:0 0 6px}.data-panel>p{font-size:10px;color:#757b83;margin:0 0 14px}
+.segment-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.segment-n{padding:18px;border:1px solid var(--line);border-radius:20px;background:#fff;position:relative;overflow:hidden}
+.segment-n .share{font-size:20px;font-weight:850;color:#7c6552}
+.segment-n h3{font-size:13px;margin:6px 0 3px}.segment-n p{font-size:10px;color:#696f77;margin:0}
+.segment-n .need{margin-top:10px;padding-top:9px;border-top:1px dashed #e0e3e6;font-size:10px;color:#555b62}
+.life-stage{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.life-stage div{padding:14px;border-radius:17px;border:1px solid var(--line);background:#fff}
+.life-stage b{display:block;font-size:11px}.life-stage span{font-size:10px;color:#6d737b}
+.voice-board{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.voice-col{padding:20px;border-radius:22px;border:1px solid var(--line)}
+.voice-good{background:#edf3ef}.voice-bad{background:#f7efeb}
+.voice-col h3{margin:0 0 12px;font-size:14px}
+.voice-line{display:grid;grid-template-columns:145px 1fr 48px;gap:8px;align-items:center;margin:10px 0}
+.voice-line b{font-size:10px}.voice-line .track{height:9px;background:rgba(255,255,255,.75);border-radius:999px;overflow:hidden}
+.voice-line .fill{height:100%;border-radius:999px;background:#b6a18f}
+.voice-bad .fill{background:#c9937f}
+.voice-line span{font-size:9px;text-align:right;color:#656b73}
+.op-priority{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.op-card{padding:19px;border:1px solid var(--line);border-radius:21px;background:#fff;position:relative}
+.op-card .rank{position:absolute;right:14px;top:13px;font-size:26px;font-weight:900;color:#e5ded8}
+.op-card h3{font-size:13px;margin:0 0 4px}.op-card p{font-size:10px;color:#696f77;margin:0}.op-card .proof{margin-top:10px;font-size:9px;color:#806955}
+.emotion-path{display:grid;grid-template-columns:1fr 40px 1fr 40px 1fr;gap:8px;align-items:center}
+.emotion-step{padding:19px;border-radius:20px;border:1px solid var(--line);text-align:center}
+.emotion-step b{display:block;font-size:14px}.emotion-step span{font-size:10px;color:#6c727a}
+.culture-layer{margin-top:12px;padding:13px 16px;border-radius:16px;background:#f1e8df;font-size:11px;color:#655548}
+.search-evidence{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.search-card{padding:14px;border-radius:17px;border:1px solid var(--line);background:#fff}
+.search-card b{display:block;font-size:12px}.search-card span{font-size:9px;color:#727881}
+.n-source{background:#252930!important;color:#fff!important;border:none!important}
+.n-source td,.n-source th{color:#fff!important;border-bottom:1px solid rgba(255,255,255,.12)!important}
+@media(max-width:900px){.brand-proof,.dual-data,.voice-board{grid-template-columns:1fr}.segment-grid{grid-template-columns:1fr 1fr}.life-stage{grid-template-columns:1fr 1fr}.search-evidence{grid-template-columns:1fr}.n-strip{grid-template-columns:1fr}}
+@media(max-width:620px){.segment-grid,.life-stage,.op-priority{grid-template-columns:1fr}.emotion-path{grid-template-columns:1fr}.emotion-path .arrow{transform:rotate(90deg)}}
+
+.fit-proof-top{display:grid;grid-template-columns:1.15fr .85fr;gap:18px;align-items:end;margin-bottom:20px}
+.fit-proof-title h2{margin-bottom:4px}
+.fit-proof-title .subline{font-size:12px;color:#7a8088}
+.fit-proof-summary{
+  padding:16px 18px;border-radius:18px;background:#f1ebe4;border:1px solid #e5d9ce;
+  font-size:12px;color:#5f554d
+}
+.fit-proof-summary b{display:block;font-size:13px;color:#4e443d;margin-bottom:4px}
+
+.fit-proof-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.fit-proof-card{
+  border:1px solid var(--line);border-radius:22px;background:#fff;overflow:hidden;min-height:245px;
+  display:flex;flex-direction:column
+}
+.fit-proof-visual{
+  height:110px;display:grid;place-items:center;background:linear-gradient(135deg,#f7f4f1,#eef1f3);
+  border-bottom:1px solid var(--line)
+}
+.fit-proof-body{padding:16px 17px 17px;display:flex;flex-direction:column;flex:1}
+.fit-proof-body h3{font-size:14px;margin:0}
+.fit-proof-body .sub-en{margin-top:2px}
+.fit-proof-key{font-size:11px;color:#686e76;margin-top:9px;line-height:1.55}
+.fit-proof-q{
+  margin-top:auto;padding:9px 11px;border-radius:12px;background:#f7f8f9;
+  font-size:10px;color:#4f555c;border:1px solid #eceef1
+}
+.fit-proof-q b{color:#2f3338}
+.fit-proof-icon{position:relative;width:78px;height:78px}
+.fit-proof-icon .person{position:absolute;bottom:7px;width:18px;border-radius:10px 10px 8px 8px;background:#c8b7a7}
+.fit-proof-icon .person:before{content:"";position:absolute;top:-15px;left:3px;width:12px;height:12px;border-radius:50%;background:#bda894}
+.fit-proof-icon .p1{left:2px;height:44px}
+.fit-proof-icon .p2{left:22px;height:51px;width:20px}
+.fit-proof-icon .p3{left:45px;height:48px;width:24px}
+.fit-proof-icon .p4{left:68px;height:55px;width:26px;transform:translateX(-14px)}
+.belly-visual{width:86px;height:70px;position:relative}
+.belly-visual:before{content:"";position:absolute;left:26px;top:4px;width:34px;height:58px;border:3px solid #baa28f;border-radius:44% 48% 52% 46%}
+.belly-visual:after{content:"→";position:absolute;right:0;top:22px;font-size:28px;color:#9a8574}
+.motion-visual{display:flex;gap:8px;align-items:center}
+.motion-visual span{width:42px;height:42px;border-radius:50%;background:#fff;border:1px solid #ddd;display:grid;place-items:center;font-size:18px}
+.thigh-visual{width:90px;height:60px;display:flex;gap:10px;align-items:flex-end;justify-content:center}
+.thigh-visual span{width:24px;height:54px;background:#d9c6b5;border-radius:16px 16px 11px 11px;position:relative}
+.thigh-visual span:after{content:"";position:absolute;bottom:10px;left:-4px;width:32px;height:6px;border-radius:999px;background:#bba48f}
+.torso-visual{width:72px;height:78px;position:relative}
+.torso-visual .body{position:absolute;left:22px;top:10px;width:28px;height:58px;border-radius:16px 16px 12px 12px;background:#d9c6b5}
+.torso-visual .arr{position:absolute;right:0;top:5px;height:66px;border-right:2px solid #aa9583}
+.torso-visual .arr:before,.torso-visual .arr:after{content:"";position:absolute;right:-4px;border-left:4px solid transparent;border-right:4px solid transparent}
+.torso-visual .arr:before{top:-1px;border-bottom:6px solid #aa9583}
+.torso-visual .arr:after{bottom:-1px;border-top:6px solid #aa9583}
+.data-visual{width:92px;padding:10px;border-radius:14px;background:#fff;border:1px solid #dfe2e6}
+.data-visual div{height:7px;border-radius:999px;background:#d9dde2;margin:6px 0}
+.data-visual div:nth-child(2){width:78%}.data-visual div:nth-child(3){width:62%}.data-visual div:nth-child(4){width:86%}
+
+.n-proof-panel{
+  margin-top:18px;padding:18px;border-radius:22px;background:#f0e8df;border:1px solid #e1d4c7;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:center
+}
+.n-proof-panel h3{font-size:14px;margin:0 0 6px}
+.n-proof-panel p{font-size:11px;color:#655a51;margin:0}
+.n-proof-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}
+.n-proof-stat{padding:12px;border-radius:15px;background:rgba(255,255,255,.75);text-align:center}
+.n-proof-stat b{display:block;font-size:17px;color:#5e4f43}
+.n-proof-stat span{font-size:9px;color:#75695f}
+.fit-proof-conclusion{
+  margin-top:12px;padding:14px 16px;border-radius:16px;background:#252930;color:#fff;
+  font-size:12px;text-align:center
+}
+@media(max-width:900px){
+  .fit-proof-top,.n-proof-panel{grid-template-columns:1fr}
+  .fit-proof-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .fit-proof-grid,.n-proof-stats{grid-template-columns:1fr}
+}
 </style>
 </head>
 <body>
 <div class="topbar">
-  <div class="nav">
-    <div class="brand">US PLUS-SIZE SHAPEWEAR</div>
-    <a href="#s1">核心洞察</a><a href="#s2">用户定义</a><a href="#s3">身体分型</a>
-    <a href="#s4">JTBD</a><a href="#s6">VOC</a><a href="#s8">Persona</a>
-    <a href="#s9">购买决策</a><a href="#s10">机会地图</a><a href="#s11">产品结构</a>
-    <a href="#s12">营销表达</a><a href="#s13">PDP</a><a href="#s17">产品定义</a>
-    <a href="#s18">开发验证</a><a href="#s19">证据</a>
-  </div>
+<div class="nav">
+<div class="brand">US PLUS-SIZE SHAPEWEAR</div>
+<a href="#s1">核心洞察</a><a href="#s2">用户定义</a><a href="#s3">身体分型</a>
+<a href="#s4">JTBD</a><a href="#s6">VOC</a><a href="#s8">Persona</a>
+<a href="#s9">购买决策</a><a href="#s10">机会地图</a><a href="#s11">产品结构</a>
+<a href="#s12">营销表达</a><a href="#s13">PDP</a><a href="#s17">产品定义</a>
+<a href="#s18">开发验证</a><a href="#s19">证据</a>
 </div>
-
+</div>
 <main class="wrap">
 <section class="hero">
-  <div class="eyebrow">Amazon US · Product Planning Insight</div>
-  <h1>美国大码女性塑身衣用户洞察</h1>
-  <p>不是把“大码”当成更大的尺码，而是重新理解身体结构、穿着场景与使用摩擦。报告从用户真实任务出发，最终落到产品结构、PDP 视觉、开发验证与 Agent 字段。</p>
-  <div class="hero-row">
-    <div class="core-quote">真正的价值不是“勒得更小”，而是 <strong>穿得进去、稳得住、塑得有效、全天能活动、外衣更好看。</strong></div>
-    <div class="stat-grid">
-      <div class="stat"><b>Fit First</b><span>先解决真实适配</span></div>
-      <div class="stat"><b>Stay Put</b><span>不卷腰 / 不卷腿</span></div>
-      <div class="stat"><b>Targeted Shape</b><span>分区压力，而非全身硬压</span></div>
-      <div class="stat"><b>Clothing Confidence</b><span>让注意力回到衣服与场景</span></div>
-    </div>
-  </div>
+<div class="eyebrow">Amazon US · Plus-Size Shapewear × Nebility Brand User Overlay</div>
+<h1>美国大码女性塑身衣用户洞察 × Nebility 用户画像</h1>
+<p>在美国大码塑身衣通用洞察的基础上，叠加 Nebility 自有搜索行为、近两年 2,000 条评论、人口统计与地域订单数据，重新回答三个问题：<strong>我们的“大码女性”到底是谁？她们为什么买？下一款产品应该优先解决什么？</strong></p>
+<div class="brand-proof">
+<div class="brand-proof-main">
+<span class="n-badge">N 品牌内部证据</span>
+<strong>核心判断：Nebility 的大码女性，不只是“更大尺码用户”，而更像一群<strong>身体处于过渡期的主动管理者</strong>。</strong>
+<p>她们可能正在经历产后、术后、体重变化、久坐通勤或重要场合，希望用一件<strong>强力有效、全天舒适、真正适配曲线身体</strong>的塑身衣，重新获得穿衣掌控感。</p>
+</div>
+<div class="brand-proof-side">
+<div><b>35–54 岁</b><span>品牌女性核心年龄段</span></div>
+<div><b>25–40 岁</b><span>产后高频生命阶段</span></div>
+<div><b>西裔 / 拉美裔</b><span>重要文化基本盘，Faja 心智强</span></div>
+<div><b>$50K–150K</b><span>中产为主，价格与效果并重</span></div>
+</div>
+</div>
+<div class="hero-row">
+<div class="core-quote">对 N 来说，真正的机会不是继续做“普通塑身衣的大码版”，而是把 <strong>Plus-Specific Fit × Faja 强塑 × 全天隐形舒适 × 动态身材适配</strong> 合成一套更完整的产品系统。</div>
+<div class="stat-grid">
+<div class="stat"><b>压缩效果好 17.1%</b><span>N 评论第一满意点</span></div>
+<div class="stat"><b>尺码问题 13.3%</b><span>N 评论第一不满点</span></div>
+<div class="stat"><b>舒适度好 10.8%</b><span>强塑之后的满意分水岭</span></div>
+<div class="stat"><b>卷边问题 5.8%</b><span>隐性刚需，直接影响退货与差评</span></div>
+</div>
+</div>
+<div class="hero-note">N 数据口径：自然搜索关键词过去 90 天 + 店铺近两年评论；用户画像报告分析日期 2026-04-20。</div>
 </section>
-
 <section class="section" id="s1">
-  <div class="card">
-    <div class="head">
-      <div><div class="kicker">01 EXECUTIVE SUMMARY</div><h2>老板先看｜8 个最重要判断</h2></div>
-      <div class="desc">不是数据堆砌，而是先把“用户矛盾 → 产品动作”一眼说清楚。</div>
-    </div>
-    <div class="grid-4 summary-cards">
-      <div class="item c1"><h3>大码 ≠ 单一体型</h3><p>同样 2X/3X，在胸、腹、臀腿、Torso 上可能完全不同。</p><span class="badge">P0 · 建立身体分型</span></div>
-      <div class="item c2"><h3>下腹必须独立研究</h3><p>Apron Belly 需要“托住 + 包住 + 平顺”，不能等同普通 Tummy Control。</p><span class="badge">P0 · Lower Belly</span></div>
-      <div class="item c3"><h3>强塑不是全身更紧</h3><p>真正需要的是腹强腿柔、臀区释放、背部稳定的 Targeted Compression。</p><span class="badge">P0 · 分区压力</span></div>
-      <div class="item c4"><h3>Roll 是结构级问题</h3><p>卷腰、卷腿会直接摧毁长时间穿着体验。</p><span class="badge">P0 · Stay-put</span></div>
-      <div class="item c5"><h3>腿部不是单纯“瘦腿”</h3><p>真实任务是平顺、防磨腿、不制造 muffin thigh。</p><span class="badge">P0 · Soft Thigh</span></div>
-      <div class="item c1"><h3>Open Bust 是包容策略</h3><p>如果无法真正做 Band × Cup，开放胸部反而更适合大胸用户。</p><span class="badge">P1 · Big Bust</span></div>
-      <div class="item c2"><h3>如厕便利是硬需求</h3><p>婚礼、工作、旅行中，Easy Bathroom 属于使用价值核心。</p><span class="badge">P0 · Usage Friction</span></div>
-      <div class="item c3"><h3>营销要从“纠正身体”转向“穿衣信心”</h3><p>用户想的是衣服更好穿，而不是被提醒“你有缺陷”。</p><span class="badge">P1 · Clothing Confidence</span></div>
-    </div>
-    <div class="source-row">
-      <a href="https://store.astm.org/d6960_d6960m-16r23.html" target="_blank">ASTM Plus Women</a>
-      <a href="https://baymard.com/research-articles/apparel-and-accessories-quantitative-ux-insights-2026" target="_blank">Baymard 2026</a>
-      <a href="https://www.reddit.com/r/PlusSize/comments/1fuj16g/" target="_blank">Apron Belly VOC</a>
-      <a href="https://www.reddit.com/r/PlusSizeFashion/comments/1u1z4jp/shapewear_recs/" target="_blank">Roll-up VOC</a>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">01 EXECUTIVE SUMMARY</div><h2>结合 N 用户画像后，报告最重要的 8 个判断</h2></div>
+<div class="desc">通用美国大码洞察负责回答“这个市场有什么问题”；N 品牌数据负责回答“哪些问题与我们的真实用户最相关”。</div>
+</div>
+<div class="grid-4 summary-cards">
+<div class="item c1"><h3>① N 的大码女性首先是“过渡期身体”</h3><p>产后腹部松弛、mom pouch、术后肿胀、体重变化、久坐腰腹是高频真实背景。</p><span class="badge">N 用户画像验证</span></div>
+<div class="item c2"><h3>② 强力塑形仍然是品牌基本盘</h3><p>压缩/塑形效果好占评论满意点 17.1%，说明 N 不能为了舒适而把“有效”做弱。</p><span class="badge">17.1% 第一满意点</span></div>
+<div class="item c3"><h3>③ 尺码是 N 最大的体验黑洞</h3><p>13.3% 的不满集中在偏小、不准、难选；对 Plus Size、曲线型和动态身材尤其致命。</p><span class="badge">13.3% 第一不满点</span></div>
+<div class="item c4"><h3>④ “强塑 × 全天舒适”必须同时成立</h3><p>N 用户满意度第二位是舒适（10.8%），不舒适也占 6.6%；这不是加分项，是分水岭。</p><span class="badge">All-Day Comfort</span></div>
+<div class="item c5"><h3>⑤ 不卷边是 N 的隐性刚需</h3><p>好评中“不卷边/不移位”5.9%，差评“卷边/上滑”5.8%，几乎是正负对冲的关键体验。</p><span class="badge">Stay-put P0</span></div>
+<div class="item c1"><h3>⑥ 西裔 / Faja 文化不能被抹掉</h3><p>西语搜索和 Colombian Faja 心智是 N 的文化资产；大码产品仍需保留“强塑、沙漏、多档可调”的 Faja 基因。</p><span class="badge">文化基本盘</span></div>
+<div class="item c2"><h3>⑦ 日常通勤比“偶尔急救”更接近品牌真实使用</h3><p>评论中日常通勤/社交/工作提及 11.8%，高于特殊场合 2.3%，说明全天穿着能力非常关键。</p><span class="badge">日常隐形</span></div>
+<div class="item c3"><h3>⑧ 大码新品应优先解决“特殊身体适配”</h3><p>Plus Size、Long Torso、FUPA、产后动态尺码都已经在 N 搜索与评论中出现，不是外部假设。</p><span class="badge">细分解决方案</span></div>
+</div>
+<div class="n-strip">
+<b>N 女性一句话画像</b>
+<p><strong>“身体处于过渡期的主动管理者”</strong>——她们通过塑身衣重新获得对身体和穿衣的掌控感，最终买的是“穿上衣服好看、在人前有底气”的自信。</p>
+</div>
+</div>
 </section>
-
 <section class="section" id="s2">
-  <div class="card">
-    <div class="head"><div><div class="kicker">02 USER DEFINITION</div><h2>目标用户不是“US 14+”，而是一组身体变量</h2></div></div>
-    <div class="user-def">
-      <div class="def"><div class="ico">①</div><h3>尺码维度</h3><p>US 14+ / XL–5X+，但不以尺码作为唯一分群。</p></div>
-      <div class="def"><div class="ico">②</div><h3>身体维度</h3><p>Apple / Pear / Hourglass / Apron Belly / Extended Plus。</p></div>
-      <div class="def"><div class="ico">③</div><h3>纵向维度</h3><p>Short / Regular / Long Torso，决定 Bodysuit 是否真正可穿。</p></div>
-      <div class="def"><div class="ico">④</div><h3>场景维度</h3><p>Wedding / Work / Daily / Travel / Date Night。</p></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">02 N BRAND USER OVERLAY</div><h2>先把“美国大码女性”收窄成 N 真正服务的人</h2></div>
+<div class="desc">大码是身体变量，N 用户画像进一步补上生命阶段、文化、职业、收入与地域。</div>
+</div>
+<div class="user-def">
+<div class="def"><div class="ico">龄</div><h3>年龄与生命阶段</h3><p>女性主力 25–54 岁，35–54 岁最核心；产后高频集中 25–40 岁，术后需求向 45+ 延伸。</p></div>
+<div class="def"><div class="ico">身</div><h3>身体状态</h3><p>产后 mom pouch、剖腹产 shelf、腰腹赘肉、术后松弛/肿胀、扁平臀、Long Torso。</p></div>
+<div class="def"><div class="ico">文</div><h3>文化与审美</h3><p>西裔/拉美裔是重要文化客群，Faja 对“强力压缩、沙漏曲线、多排扣”有明确心智。</p></div>
+<div class="def"><div class="ico">收</div><h3>消费能力</h3><p>家庭收入 $50K–150K 为主，既看性价比，也愿意为真正有效、耐用、可复购的产品付费。</p></div>
+</div>
+<div class="life-stage">
+<div><b>日常通勤</b><span>白领 / 护士 / 服务业，制服或裙装内穿</span></div>
+<div><b>产后恢复</b><span>身材持续变化，需要可调节与温和承托</span></div>
+<div><b>术后恢复</b><span>对舒适、支撑、如厕与专业感更敏感</span></div>
+<div><b>特殊场合</b><span>婚礼 / 派对 / 毕业舞会，愿为即时效果付费</span></div>
+</div>
+<div class="n-strip">
+<b>地域补充</b>
+<p>CA / TX / FL 是 N 核心州：CA 的 Faja 文化与通勤/健身明显，TX 的大码与产后需求更突出，FL 对透气、术后恢复、易穿脱更敏感。</p>
+</div>
+</div>
 </section>
-
 <section class="section" id="s3">
-  <div class="card">
-    <div class="head">
-      <div><div class="kicker">03 BODY SEGMENTATION</div><h2>身体分型｜同样 3X，需求可能完全不同</h2></div>
-      <div class="desc">视觉上把“尺码”拆成真实身体结构，让版型和结构讨论有对象。</div>
-    </div>
-    <div class="body-grid">
-      <div class="body-card">
-        <div class="figure"><svg viewBox="0 0 80 130"><circle cx="40" cy="15" r="10" fill="#c7b09c"/><path d="M28 30 C20 48,18 72,25 92 C29 103,30 116,29 126 L39 126 L40 88 L41 126 L51 126 C50 115,51 102,55 92 C62 73,60 48,52 30 Z" fill="#dccbbd"/></svg></div>
-        <h3>腹部集中型<span class="sub-en">Apple</span></h3><p>上腹 + 腰 + 下腹整体包覆</p><div class="risk">风险：腰口下卷</div>
-      </div>
-      <div class="body-card">
-        <div class="figure"><svg viewBox="0 0 80 130"><circle cx="40" cy="15" r="10" fill="#c7b09c"/><path d="M29 30 C24 48,22 68,28 83 C30 90,26 99,24 108 C23 116,28 126,33 126 L39 126 L40 88 L41 126 L47 126 C52 126,57 116,56 108 C54 98,50 90,52 82 C58 65,56 47,51 30 Z" fill="#dccbbd"/></svg></div>
-        <h3>下腹托举型<span class="sub-en">Apron Belly</span></h3><p>需要下腹独立承托</p><div class="risk">风险：只收腰不托腹</div>
-      </div>
-      <div class="body-card">
-        <div class="figure"><svg viewBox="0 0 80 130"><circle cx="40" cy="15" r="10" fill="#c7b09c"/><path d="M31 30 C27 48,30 63,26 77 C21 92,18 106,25 126 L36 126 L40 92 L44 126 L55 126 C62 106,59 92,54 77 C50 63,53 48,49 30 Z" fill="#dccbbd"/></svg></div>
-        <h3>臀腿丰满型<span class="sub-en">Pear</span></h3><p>腿口与臀部空间更关键</p><div class="risk">风险：muffin thigh</div>
-      </div>
-      <div class="body-card">
-        <div class="figure"><svg viewBox="0 0 80 130"><circle cx="40" cy="15" r="10" fill="#c7b09c"/><path d="M28 30 C21 45,27 59,31 67 C33 72,24 87,23 99 C22 112,29 126,35 126 L40 92 L45 126 C51 126,58 112,57 99 C56 87,47 72,49 67 C53 59,59 45,52 30 Z" fill="#dccbbd"/></svg></div>
-        <h3>沙漏大臀腿<span class="sub-en">Hourglass</span></h3><p>腰塑形但臀部不能压平</p><div class="risk">风险：flatten butt</div>
-      </div>
-      <div class="body-card">
-        <div class="figure"><svg viewBox="0 0 80 130"><circle cx="40" cy="15" r="10" fill="#c7b09c"/><path d="M25 30 C18 45,22 60,28 69 C33 77,29 92,29 102 L31 126 L40 126 L41 91 L49 126 L53 126 C54 109,50 92,52 75 C55 57,61 44,55 30 Z" fill="#dccbbd"/></svg></div>
-        <h3>大胸型<span class="sub-en">Full Bust</span></h3><p>胸、肩带、背部适配更重要</p><div class="risk">风险：压胸 / 溢杯</div>
-      </div>
-      <div class="body-card">
-        <div class="figure"><svg viewBox="0 0 80 130"><circle cx="40" cy="15" r="10" fill="#c7b09c"/><path d="M30 30 C25 48,27 72,30 97 L31 126 L39 126 L40 94 L41 126 L49 126 L50 97 C53 72,55 48,50 30 Z" fill="#dccbbd"/></svg></div>
-        <h3>长躯干型<span class="sub-en">Long Torso</span></h3><p>横向够，纵向未必够</p><div class="risk">风险：crotch pulling</div>
-      </div>
-      <div class="body-card">
-        <div class="figure"><svg viewBox="0 0 80 130"><circle cx="40" cy="15" r="10" fill="#c7b09c"/><path d="M24 30 C16 49,18 74,24 95 C28 108,28 119,26 126 L38 126 L40 92 L42 126 L54 126 C52 119,52 108,56 95 C62 74,64 49,56 30 Z" fill="#dccbbd"/></svg></div>
-        <h3>延伸大码型<span class="sub-en">Extended Plus</span></h3><p>3X–5X+ 需要独立版型</p><div class="risk">风险：假性大码</div>
-      </div>
-    </div>
-    <div class="source-row">
-      <a href="https://store.astm.org/d6960_d6960m-16r23.html" target="_blank">ASTM Plus Women's Figure Type</a>
-      <a href="https://www.tandfonline.com/doi/abs/10.1080/17543266.2016.1214291" target="_blank">US women's clothing size study</a>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">03 BODY SEGMENTATION</div><h2>身体分型｜同样 3X，需求可能完全不同</h2></div>
+<div class="desc">视觉上把“尺码”拆成真实身体结构，让版型和结构讨论有对象。</div>
+</div>
+<div class="body-grid">
+<div class="body-card">
+<div class="figure"><svg viewbox="0 0 80 130"><circle cx="40" cy="15" fill="#c7b09c" r="10"></circle><path d="M28 30 C20 48,18 72,25 92 C29 103,30 116,29 126 L39 126 L40 88 L41 126 L51 126 C50 115,51 102,55 92 C62 73,60 48,52 30 Z" fill="#dccbbd"></path></svg></div>
+<h3>腹部集中型<span class="sub-en">Apple</span></h3><p>上腹 + 腰 + 下腹整体包覆</p><div class="risk">风险：腰口下卷</div>
+</div>
+<div class="body-card">
+<div class="figure"><svg viewbox="0 0 80 130"><circle cx="40" cy="15" fill="#c7b09c" r="10"></circle><path d="M29 30 C24 48,22 68,28 83 C30 90,26 99,24 108 C23 116,28 126,33 126 L39 126 L40 88 L41 126 L47 126 C52 126,57 116,56 108 C54 98,50 90,52 82 C58 65,56 47,51 30 Z" fill="#dccbbd"></path></svg></div>
+<h3>下腹托举型<span class="sub-en">Apron Belly</span></h3><p>需要下腹独立承托</p><div class="risk">风险：只收腰不托腹</div>
+</div>
+<div class="body-card">
+<div class="figure"><svg viewbox="0 0 80 130"><circle cx="40" cy="15" fill="#c7b09c" r="10"></circle><path d="M31 30 C27 48,30 63,26 77 C21 92,18 106,25 126 L36 126 L40 92 L44 126 L55 126 C62 106,59 92,54 77 C50 63,53 48,49 30 Z" fill="#dccbbd"></path></svg></div>
+<h3>臀腿丰满型<span class="sub-en">Pear</span></h3><p>腿口与臀部空间更关键</p><div class="risk">风险：muffin thigh</div>
+</div>
+<div class="body-card">
+<div class="figure"><svg viewbox="0 0 80 130"><circle cx="40" cy="15" fill="#c7b09c" r="10"></circle><path d="M28 30 C21 45,27 59,31 67 C33 72,24 87,23 99 C22 112,29 126,35 126 L40 92 L45 126 C51 126,58 112,57 99 C56 87,47 72,49 67 C53 59,59 45,52 30 Z" fill="#dccbbd"></path></svg></div>
+<h3>沙漏大臀腿<span class="sub-en">Hourglass</span></h3><p>腰塑形但臀部不能压平</p><div class="risk">风险：flatten butt</div>
+</div>
+<div class="body-card">
+<div class="figure"><svg viewbox="0 0 80 130"><circle cx="40" cy="15" fill="#c7b09c" r="10"></circle><path d="M25 30 C18 45,22 60,28 69 C33 77,29 92,29 102 L31 126 L40 126 L41 91 L49 126 L53 126 C54 109,50 92,52 75 C55 57,61 44,55 30 Z" fill="#dccbbd"></path></svg></div>
+<h3>大胸型<span class="sub-en">Full Bust</span></h3><p>胸、肩带、背部适配更重要</p><div class="risk">风险：压胸 / 溢杯</div>
+</div>
+<div class="body-card">
+<div class="figure"><svg viewbox="0 0 80 130"><circle cx="40" cy="15" fill="#c7b09c" r="10"></circle><path d="M30 30 C25 48,27 72,30 97 L31 126 L39 126 L40 94 L41 126 L49 126 L50 97 C53 72,55 48,50 30 Z" fill="#dccbbd"></path></svg></div>
+<h3>长躯干型<span class="sub-en">Long Torso</span></h3><p>横向够，纵向未必够</p><div class="risk">风险：crotch pulling</div>
+</div>
+<div class="body-card">
+<div class="figure"><svg viewbox="0 0 80 130"><circle cx="40" cy="15" fill="#c7b09c" r="10"></circle><path d="M24 30 C16 49,18 74,24 95 C28 108,28 119,26 126 L38 126 L40 92 L42 126 L54 126 C52 119,52 108,56 95 C62 74,64 49,56 30 Z" fill="#dccbbd"></path></svg></div>
+<h3>延伸大码型<span class="sub-en">Extended Plus</span></h3><p>3X–5X+ 需要独立版型</p><div class="risk">风险：假性大码</div>
+</div>
+</div>
+<div class="source-row">
+<a href="https://store.astm.org/d6960_d6960m-16r23.html" target="_blank">ASTM Plus Women's Figure Type</a>
+<a href="https://www.tandfonline.com/doi/abs/10.1080/17543266.2016.1214291" target="_blank">US women's clothing size study</a>
+</div>
+<div class="n-strip">
+<b>N 已验证的身体问题</b>
+<p>用户评论已明确出现：<strong>apron belly、mom pouch、C-section shelf、Long Torso、扁平臀、腰腹赘肉</strong>。因此“身体分型”不是研究层的理论，而应该进入 N 的版型、尺码和 UAT 体系。</p>
+</div>
+</div>
 </section>
-
 <section class="section" id="s4">
-  <div class="card">
-    <div class="head"><div><div class="kicker">04 SCENARIO × JTBD</div><h2>JTBD 不是“塑形”，而是一条完整任务路径</h2></div></div>
-    <div class="jtbd-track">
-      <div class="jtbd-node c1"><strong>场景触发</strong><p>婚礼 / 工作 / 旅行 / 约会，需要长时间穿贴身服装。</p></div>
-      <div class="arrow">→</div>
-      <div class="jtbd-node c2"><strong>实际任务</strong><p>腹、腰、背、臀腿更平顺，同时身体还能正常活动。</p></div>
-      <div class="arrow">→</div>
-      <div class="jtbd-node c3"><strong>使用阻力</strong><p>卷边、勒腿、压胸、热、显痕、如厕困难。</p></div>
-      <div class="arrow">→</div>
-      <div class="jtbd-node c4"><strong>真正结果</strong><p>少想一点身体，把注意力放回场景和衣服。</p></div>
-    </div>
-    <div class="scene-tabs">
-      <div class="scene"><b>婚礼 / Wedding</b><span>平顺 + 坐/吃/跳/如厕</span></div>
-      <div class="scene"><b>工作 / Work</b><span>全天稳定 + 坐姿不卷</span></div>
-      <div class="scene"><b>旅行 / Travel</b><span>防磨腿 + 长时舒适</span></div>
-      <div class="scene"><b>派对 / Party</b><span>贴身裙无痕 + Back smoothing</span></div>
-      <div class="scene"><b>约会 / Date</b><span>自然轮廓 + Clothing Confidence</span></div>
-    </div>
-    <div class="source-row"><a href="https://www.reddit.com/r/PlusSizeFashion/comments/1ssrf1l/wedding_dress_shapewear/" target="_blank">Wedding VOC</a></div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">04 SCENARIO × JTBD</div><h2>N 用户的真实场景：从“特殊场合急救”转向“全天候日常武装”</h2></div>
+<div class="desc">搜索行为和评论行为是两个维度：前者代表“用户想找什么”，后者代表“用户实际怎么穿”。</div>
+</div>
+<div class="dual-data">
+<div class="data-panel c1">
+<h3>搜索行为｜场景流量</h3><p>报告原始口径，显示 N 用户主动搜索时最强的需求入口。</p>
+<div class="metric-bars">
+<div class="metric-row"><b>日常隐形塑形</b><div class="metric-track"><div class="metric-fill" style="width:100%"></div></div><span>29.8%</span></div>
+<div class="metric-row"><b>运动健身燃脂</b><div class="metric-track"><div class="metric-fill" style="width:91.6%"></div></div><span>27.3%</span></div>
+<div class="metric-row"><b>特殊场合速效</b><div class="metric-track"><div class="metric-fill" style="width:38.6%"></div></div><span>11.5%</span></div>
+<div class="metric-row"><b>产后恢复</b><div class="metric-track"><div class="metric-fill" style="width:20.5%"></div></div><span>6.1%</span></div>
+</div>
+</div>
+<div class="data-panel c2">
+<h3>评论行为｜实际使用提及率</h3><p>基于 N 近两年 2,000 条评论，反映买回去以后真正的使用场景。</p>
+<div class="metric-bars">
+<div class="metric-row"><b>日常通勤/社交/工作</b><div class="metric-track"><div class="metric-fill" style="width:100%"></div></div><span>11.8%</span></div>
+<div class="metric-row"><b>术后恢复</b><div class="metric-track"><div class="metric-fill" style="width:36.4%"></div></div><span>4.3%</span></div>
+<div class="metric-row"><b>产后恢复</b><div class="metric-track"><div class="metric-fill" style="width:22.0%"></div></div><span>2.6%</span></div>
+<div class="metric-row"><b>特殊场合</b><div class="metric-track"><div class="metric-fill" style="width:19.5%"></div></div><span>2.3%</span></div>
+<div class="metric-row"><b>健身/运动</b><div class="metric-track"><div class="metric-fill" style="width:16.1%"></div></div><span>1.9%</span></div>
+</div>
+</div>
+</div>
+<div class="jtbd-track" style="margin-top:18px">
+<div class="jtbd-node c1"><strong>场景触发</strong><p>上班、产后、术后、礼服、健身，身体正处于“要管理”的阶段。</p></div>
+<div class="arrow">→</div>
+<div class="jtbd-node c2"><strong>功能任务</strong><p>强力收住腰腹，但能久坐、走动、呼吸、如厕。</p></div>
+<div class="arrow">→</div>
+<div class="jtbd-node c3"><strong>体验任务</strong><p>不卷、不戳、不闷、不显痕，尺码真正适配曲线。</p></div>
+<div class="arrow">→</div>
+<div class="jtbd-node c4"><strong>最终结果</strong><p>穿衣更利落，重新获得身体掌控感和社交自信。</p></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s5">
-  <div class="card">
-    <div class="head"><div><div class="kicker">05 JTBD SUMMARY</div><h2>四层任务定义</h2></div></div>
-    <div class="grid-4">
-      <div class="mini c1"><div class="zh-title">实际任务<span class="sub-en">Functional Job</span></div><p class="small">长时穿着贴身服装时，轮廓更顺，但坐、走、吃饭、如厕都不受影响。</p></div>
-      <div class="mini c2"><div class="zh-title">情绪任务<span class="sub-en">Emotional Job</span></div><p class="small">不再反复检查肚子、勒痕、卷边和内衣痕迹。</p></div>
-      <div class="mini c3"><div class="zh-title">社会任务<span class="sub-en">Social Job</span></div><p class="small">别人先看到整体造型，而不是某个身体部位。</p></div>
-      <div class="mini c4"><div class="zh-title">机会定义<span class="sub-en">Opportunity</span></div><p class="small">Body-specific Targeted Shaping + Stay-put + Everyday Usability。</p></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">05 JTBD SUMMARY</div><h2>大码女性 × N 品牌的 JTBD 定义</h2></div></div>
+<div class="grid-4">
+<div class="mini c1"><div class="zh-title">实际任务<span class="sub-en">Functional Job</span></div><p class="small">在通勤、产后恢复、术后、婚礼或日常贴身穿搭中，明显收住腰腹和下腹，同时保持身体可活动。</p></div>
+<div class="mini c2"><div class="zh-title">情绪任务<span class="sub-en">Emotional Job</span></div><p class="small">身体在变化，但我仍能主动管理它；我不想因为尺码、卷边或勒痕一直被提醒自己的身体。</p></div>
+<div class="mini c3"><div class="zh-title">社会任务<span class="sub-en">Social Job</span></div><p class="small">穿制服、裙装或礼服时，看起来利落、曲线完整、有底气，但别人不需要知道我穿了塑身衣。</p></div>
+<div class="mini c4"><div class="zh-title">品牌机会<span class="sub-en">N Opportunity</span></div><p class="small"><strong>Faja-level Effect × Plus-specific Fit × Invisible All-day Comfort × Adjustable Recovery Fit</strong></p></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s6">
-  <div class="card">
-    <div class="head"><div><div class="kicker">06 VOC PAIN MAP</div><h2>VOC 痛点热区｜哪些问题最容易让产品直接失败？</h2></div></div>
-    <div class="heat-wrap">
-      <div class="heat-body">
-        <h3>身体热区</h3>
-        <div class="heat-grid">
-          <div class="heat red"><b>下腹 / Lower Belly</b><span>只收腰、不托腹</span></div>
-          <div class="heat red"><b>腰口 / Waistband</b><span>roll down / fold</span></div>
-          <div class="heat red"><b>腿口 / Leg Opening</b><span>roll up / muffin thigh</span></div>
-          <div class="heat orange"><b>胸部 / Bust</b><span>spillage / flatten</span></div>
-          <div class="heat orange"><b>裆部 / Crotch</b><span>hard to pee / pulling</span></div>
-          <div class="heat orange"><b>肩带 / Strap</b><span>digging / irritation</span></div>
-          <div class="heat green"><b>臀部 / Butt</b><span>flatten butt</span></div>
-          <div class="heat blue"><b>背部 / Back</b><span>bra line / back bulge</span></div>
-        </div>
-      </div>
-      <div class="voc-list">
-        <div class="voc"><span class="lvl">卷腰 / Roll Down</span><p>坐下后腰口折叠，腹部出现新的 bulge。</p><span class="pill-p0">P0</span></div>
-        <div class="voc"><span class="lvl">卷腿 / Roll Up</span><p>走路时腿口上移，摩擦、勒痛、需要反复调整。</p><span class="pill-p0">P0</span></div>
-        <div class="voc"><span class="lvl">腿口勒肉</span><p>塑了腹部，却在大腿制造第二层肉。</p><span class="pill-p0">P0</span></div>
-        <div class="voc"><span class="lvl">胸部不适配</span><p>大胸用户出现压胸、溢杯或肩带拉扯。</p><span class="pill-p0">P0</span></div>
-        <div class="voc"><span class="lvl">如厕困难</span><p>婚礼、工作等长时场景中，操作成本过高。</p><span class="pill-p0">P0</span></div>
-        <div class="voc"><span class="lvl">闷热显痕</span><p>强压和厚边让夏季与紧身裙场景直接失效。</p><span class="pill-p1">P1</span></div>
-      </div>
-    </div>
-    <div class="source-row">
-      <a href="https://www.reddit.com/r/PlusSizeFashion/comments/1kj81fd/" target="_blank">Muffin Thigh VOC</a>
-      <a href="https://www.reddit.com/r/PlusSizeFashion/comments/15h32pp/" target="_blank">Anti-Chafing VOC</a>
-      <a href="https://www.reddit.com/r/weddingplanning/comments/1v5hym9/plus_size_undergarments/" target="_blank">Roll / Bodysuit VOC</a>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">06 VOC PAIN MAP</div><h2>VOC 痛点热区｜哪些问题最容易让产品直接失败？</h2></div></div>
+<div class="heat-wrap">
+<div class="heat-body">
+<h3>身体热区</h3>
+<div class="heat-grid">
+<div class="heat red"><b>下腹 / Lower Belly</b><span>只收腰、不托腹</span></div>
+<div class="heat red"><b>腰口 / Waistband</b><span>roll down / fold</span></div>
+<div class="heat red"><b>腿口 / Leg Opening</b><span>roll up / muffin thigh</span></div>
+<div class="heat orange"><b>胸部 / Bust</b><span>spillage / flatten</span></div>
+<div class="heat orange"><b>裆部 / Crotch</b><span>hard to pee / pulling</span></div>
+<div class="heat orange"><b>肩带 / Strap</b><span>digging / irritation</span></div>
+<div class="heat green"><b>臀部 / Butt</b><span>flatten butt</span></div>
+<div class="heat blue"><b>背部 / Back</b><span>bra line / back bulge</span></div>
+</div>
+</div>
+<div class="voc-list">
+<div class="voc"><span class="lvl">卷腰 / Roll Down</span><p>坐下后腰口折叠，腹部出现新的 bulge。</p><span class="pill-p0">P0</span></div>
+<div class="voc"><span class="lvl">卷腿 / Roll Up</span><p>走路时腿口上移，摩擦、勒痛、需要反复调整。</p><span class="pill-p0">P0</span></div>
+<div class="voc"><span class="lvl">腿口勒肉</span><p>塑了腹部，却在大腿制造第二层肉。</p><span class="pill-p0">P0</span></div>
+<div class="voc"><span class="lvl">胸部不适配</span><p>大胸用户出现压胸、溢杯或肩带拉扯。</p><span class="pill-p0">P0</span></div>
+<div class="voc"><span class="lvl">如厕困难</span><p>婚礼、工作等长时场景中，操作成本过高。</p><span class="pill-p0">P0</span></div>
+<div class="voc"><span class="lvl">闷热显痕</span><p>强压和厚边让夏季与紧身裙场景直接失效。</p><span class="pill-p1">P1</span></div>
+</div>
+</div>
+<div class="source-row">
+<a href="https://www.reddit.com/r/PlusSizeFashion/comments/1kj81fd/" target="_blank">Muffin Thigh VOC</a>
+<a href="https://www.reddit.com/r/PlusSizeFashion/comments/15h32pp/" target="_blank">Anti-Chafing VOC</a>
+<a href="https://www.reddit.com/r/weddingplanning/comments/1v5hym9/plus_size_undergarments/" target="_blank">Roll / Bodysuit VOC</a>
+</div>
+</div>
 </section>
-
 <section class="section" id="s7">
-  <div class="card">
-    <div class="head"><div><div class="kicker">07 BODY-PART NEED MAP</div><h2>身体部位 × 设计任务</h2></div></div>
-    <div class="part-map">
-      <div class="part"><b>上腹</b><em>Upper Tummy</em><p>平顺，但不要对胃部做过度压迫。</p></div>
-      <div class="part"><b>下腹</b><em>Lower Belly</em><p>托住、包住、减少坠感。</p></div>
-      <div class="part"><b>腰</b><em>Waist</em><p>稳定、不下卷，而不是单纯更紧。</p></div>
-      <div class="part"><b>背部</b><em>Back</em><p>减少 bra line / back bulge。</p></div>
-      <div class="part"><b>胸部</b><em>Bust</em><p>优先兼容，而非强行压缩。</p></div>
-      <div class="part"><b>臀部</b><em>Butt</em><p>保留体积，避免 flatten butt。</p></div>
-      <div class="part"><b>大腿</b><em>Thigh</em><p>轻塑 + 防磨腿。</p></div>
-      <div class="part"><b>腿口</b><em>Leg Opening</em><p>柔性、不卷、不勒、不显痕。</p></div>
-      <div class="part"><b>裆部</b><em>Crotch</em><p>舒适 + Easy Bathroom。</p></div>
-      <div class="part"><b>肩带</b><em>Strap</em><p>宽、软、可调，分散纵向拉力。</p></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">07 BODY-PART NEED MAP</div><h2>身体部位 × 设计任务</h2></div></div>
+<div class="part-map">
+<div class="part"><b>上腹</b><em>Upper Tummy</em><p>平顺，但不要对胃部做过度压迫。</p></div>
+<div class="part"><b>下腹</b><em>Lower Belly</em><p>托住、包住、减少坠感。</p></div>
+<div class="part"><b>腰</b><em>Waist</em><p>稳定、不下卷，而不是单纯更紧。</p></div>
+<div class="part"><b>背部</b><em>Back</em><p>减少 bra line / back bulge。</p></div>
+<div class="part"><b>胸部</b><em>Bust</em><p>优先兼容，而非强行压缩。</p></div>
+<div class="part"><b>臀部</b><em>Butt</em><p>保留体积，避免 flatten butt。</p></div>
+<div class="part"><b>大腿</b><em>Thigh</em><p>轻塑 + 防磨腿。</p></div>
+<div class="part"><b>腿口</b><em>Leg Opening</em><p>柔性、不卷、不勒、不显痕。</p></div>
+<div class="part"><b>裆部</b><em>Crotch</em><p>舒适 + Easy Bathroom。</p></div>
+<div class="part"><b>肩带</b><em>Strap</em><p>宽、软、可调，分散纵向拉力。</p></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s8">
-  <div class="card">
-    <div class="head"><div><div class="kicker">08 PERSONA</div><h2>5 类核心 Persona｜按任务，不按年龄硬切</h2></div></div>
-    <div class="persona-grid">
-      <div class="persona"><div class="num">P1</div><h3>礼服塑形型</h3><small>Wedding / Party</small><ul><li>腹部 + 背部平顺</li><li>能坐 / 吃 / 跳 / 如厕</li><li>最怕卷边与显痕</li></ul></div>
-      <div class="persona"><div class="num">P2</div><h3>下腹托举型</h3><small>Apron Belly</small><ul><li>下腹是核心问题</li><li>想被托住，不想被勒成两层</li><li>普通收腰产品满意度低</li></ul></div>
-      <div class="persona"><div class="num">P3</div><h3>日常舒适型</h3><small>Work / Daily</small><ul><li>轻中度塑形</li><li>久坐不卷腰</li><li>比极致收腰更在意舒服</li></ul></div>
-      <div class="persona"><div class="num">P4</div><h3>大腿防磨型</h3><small>Travel / Dress</small><ul><li>大腿摩擦明显</li><li>防磨 + 平顺</li><li>最怕腿口上卷和夹肉</li></ul></div>
-      <div class="persona"><div class="num">P5</div><h3>延伸大码型</h3><small>3X–5X+</small><ul><li>最核心是“真的穿得进去”</li><li>穿脱成本更敏感</li><li>对假性大码容忍度低</li></ul></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">08 N FEMALE PERSONA</div><h2>把通用 Persona 换成 N 的 6 类真实女性画像</h2></div>
+<div class="desc">以下占比来自 N 女性画像中的估算区间，画像之间可能存在重叠，主要用于产品与内容分层，不用于严格人口加总。</div>
+</div>
+<div class="segment-grid">
+<div class="segment-n c1"><div class="share">25–30%</div><h3>西裔文化型<span class="sub-en">Hispanic / Faja Culture</span></h3><p>25–55 岁，拉丁裔/西裔为主；沙漏/梨型、产后腹部松弛较常见。</p><div class="need"><strong>要：</strong>强力 Faja、多排扣、沙漏曲线、高腰、透气。<br/><strong>痛：</strong>曲线体型与尺码不匹配、肤色选项不准。</div></div>
+<div class="segment-n c2"><div class="share">20–25%</div><h3>产后恢复型<span class="sub-en">Postpartum Recovery</span></h3><p>25–40 岁；mom pouch、剖腹产疤痕、腹部松弛，身材处于持续变化中。</p><div class="need"><strong>要：</strong>支撑、亲肤、多档可调、方便如厕。<br/><strong>痛：</strong>骨条戳伤口、尺码变化难选、卷边。</div></div>
+<div class="segment-n c4"><div class="share">20–25%</div><h3>通勤职场型<span class="sub-en">Workday Invisible</span></h3><p>25–54 岁；白领、护士、服务业，高频穿在制服、衬衫、裙装内。</p><div class="need"><strong>要：</strong>强塑、无痕、全天舒适、不卷边。<br/><strong>痛：</strong>久坐勒痕、显形、白色/肤色适配差。</div></div>
+<div class="segment-n c3"><div class="share">10–15%</div><h3>特殊场合型<span class="sub-en">Occasion / Dress</span></h3><p>18–55 岁；婚礼、派对、毕业舞会、晚宴等即时需求。</p><div class="need"><strong>要：</strong>即时显瘦、平滑、提臀、适配礼服领口。<br/><strong>痛：</strong>穿脱难、骨条显形、如厕麻烦。</div></div>
+<div class="segment-n c5"><div class="share">8–10%</div><h3>术后康复型<span class="sub-en">Post-Surgery</span></h3><p>35–65 岁；吸脂、腹壁整形、剖腹产等恢复阶段。</p><div class="need"><strong>要：</strong>专业支撑、柔软不摩擦、透气、方便如厕。<br/><strong>痛：</strong>面料硬、挂钩难用、消肿后尺码变化。</div></div>
+<div class="segment-n c1"><div class="share">5–8%</div><h3>健身运动型<span class="sub-en">Fitness / Workout</span></h3><p>20–45 岁；把塑身衣视为核心支撑或运动装备的一部分。</p><div class="need"><strong>要：</strong>支撑、透气、稳定、可外穿。<br/><strong>痛：</strong>闷热、运动时卷边、压缩不足。</div></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s9">
-  <div class="card">
-    <div class="head"><div><div class="kicker">09 PURCHASE DECISION</div><h2>购买决策漏斗｜用户先判断“能不能穿”，再判断“塑得多强”</h2></div></div>
-    <div class="decision-grid">
-      <div class="funnel">
-        <div class="f f1">① 尺码真实性｜Fit</div>
-        <div class="f f2">② 稳定性｜Stay Put</div>
-        <div class="f f3">③ 舒适时长｜Comfort</div>
-        <div class="f f4">④ 塑形效果｜Shape</div>
-        <div class="f f5">⑤ 穿衣信心｜Confidence</div>
-      </div>
-      <div class="decision-list">
-        <div class="decision"><b>“我穿得进去吗？”</b><p>需要真人尺码、身高、Bust/Waist/Hip。</p></div>
-        <div class="decision"><b>“坐下来会卷吗？”</b><p>需要坐姿/走动动态展示。</p></div>
-        <div class="decision"><b>“大腿会不会勒？”</b><p>需要腿口近景与 body-shape 相似模特。</p></div>
-        <div class="decision"><b>“要整件脱掉上厕所吗？”</b><p>需要如厕结构步骤图。</p></div>
-        <div class="decision"><b>“穿 8 小时会不会热？”</b><p>需要材料和长时场景证据。</p></div>
-        <div class="decision"><b>“穿裙子能不能看出来？”</b><p>需要 fitted dress 外穿测试。</p></div>
-      </div>
-    </div>
-    <div class="source-row">
-      <a href="https://baymard.com/research-articles/apparel-and-accessories-quantitative-ux-insights-2026" target="_blank">Baymard Apparel UX</a>
-      <a href="https://www.vogue.com/article/the-editors-cut-a-full-data-breakdown-from-the-vogue-business-consumer-sizing-survey" target="_blank">Vogue Business Sizing Survey</a>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">09 N VOICE SCOREBOARD</div><h2>N 的好评与差评共同告诉我们：什么决定“好穿”</h2></div>
+<div class="desc">同一维度同时出现高满意和高不满，说明它不是边缘体验，而是产品竞争的核心战场。</div>
+</div>
+<div class="voice-board">
+<div class="voice-col voice-good">
+<h3>用户最满意什么</h3>
+<div class="voice-line"><b>压缩 / 塑形效果</b><div class="track"><div class="fill" style="width:100%"></div></div><span>17.1%</span></div>
+<div class="voice-line"><b>穿着舒适</b><div class="track"><div class="fill" style="width:63.2%"></div></div><span>10.8%</span></div>
+<div class="voice-line"><b>不卷边 / 不移位</b><div class="track"><div class="fill" style="width:34.5%"></div></div><span>5.9%</span></div>
+<div class="voice-line"><b>质量 / 耐用</b><div class="track"><div class="fill" style="width:25.7%"></div></div><span>4.4%</span></div>
+<div class="voice-line"><b>方便如厕 / 可调节</b><div class="track"><div class="fill" style="width:18.1%"></div></div><span>3.1%</span></div>
+<div class="voice-line"><b>尺码准确 / 合身</b><div class="track"><div class="fill" style="width:15.2%"></div></div><span>2.6%</span></div>
+</div>
+<div class="voice-col voice-bad">
+<h3>用户最不满什么</h3>
+<div class="voice-line"><b>尺码偏小 / 难选</b><div class="track"><div class="fill" style="width:100%"></div></div><span>13.3%</span></div>
+<div class="voice-line"><b>勒 / 硬 / 痒 / 骨条戳</b><div class="track"><div class="fill" style="width:49.6%"></div></div><span>6.6%</span></div>
+<div class="voice-line"><b>卷边 / 上滑 / 移位</b><div class="track"><div class="fill" style="width:43.6%"></div></div><span>5.8%</span></div>
+<div class="voice-line"><b>压缩不足</b><div class="track"><div class="fill" style="width:36.8%"></div></div><span>4.9%</span></div>
+<div class="voice-line"><b>质量差 / 易损坏</b><div class="track"><div class="fill" style="width:32.3%"></div></div><span>4.3%</span></div>
+<div class="voice-line"><b>Long / Short Torso 不适配</b><div class="track"><div class="fill" style="width:19.5%"></div></div><span>2.6%</span></div>
+</div>
+</div>
+<div class="n-strip">
+<b>对大码线最重要的启示</b>
+<p><strong>“有效”已经得到品牌验证，但“适配”还没有。</strong> 大码新品的第一优先级不是再加一点压缩，而是解决尺码、身长、曲线比例、卷边和长时舒适。</p>
+</div>
+</div>
 </section>
-
 <section class="section" id="s10">
-  <div class="card">
-    <div class="head"><div><div class="kicker">10 PRODUCT OPPORTUNITY</div><h2>产品机会地图｜优先做“高痛点 × 高差异”</h2></div></div>
-    <div class="op-map">
-      <div class="quad q1"><h3>高痛点 × 高差异</h3><p>最值得优先进入验证。</p><div class="opp-tags"><span>Apron Belly</span><span>Easy Bathroom</span><span>No Muffin Thigh</span><span>Extended Plus</span></div></div>
-      <div class="quad q2"><h3>高痛点 × 中差异</h3><p>需求明确，但已有较多成熟解法。</p><div class="opp-tags"><span>Anti-Roll</span><span>Anti-Chafing</span><span>Back Smoothing</span></div></div>
-      <div class="quad q3"><h3>中痛点 × 高差异</h3><p>更适合做第二层产品差异。</p><div class="opp-tags"><span>Long Torso</span><span>Big Bust Friendly</span></div></div>
-      <div class="quad q4"><h3>中痛点 × 中差异</h3><p>适合作为完整体验的辅助项。</p><div class="opp-tags"><span>Breathable Zone</span><span>Butt-friendly shaping</span></div></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">10 N PLUS-SIZE OPPORTUNITY</div><h2>N 大码女性产品机会｜从品牌短板和已验证优势同时出发</h2></div>
+</div>
+<div class="op-priority">
+<div class="op-card c1"><div class="rank">01</div><h3>Plus-Specific Fit System</h3><p>独立大码版型 + 曲线体型放码 + 更清晰的尺码推荐，不再把普通码直接放大。</p><div class="proof">N 证据：尺码问题 13.3%，为最大不满；Plus Size / Long Torso 已进入搜索。</div></div>
+<div class="op-card c2"><div class="rank">02</div><h3>Dynamic Fit｜动态身材适配</h3><p>多排扣 / 多档调节 / 可调肩带，让产后、术后、体重波动期可以随身体变化调整。</p><div class="proof">N 证据：产后/术后是高价值人群；“三档收紧”已被评论正向验证。</div></div>
+<div class="op-card c3"><div class="rank">03</div><h3>Lower Belly / FUPA 专项</h3><p>针对 mom pouch、C-section shelf、apron belly 做下腹承托，而非只有腰围收紧。</p><div class="proof">N 证据：fupa / lower belly 搜索明确，产后评论反复出现 mom pouch。</div></div>
+<div class="op-card c4"><div class="rank">04</div><h3>Stay-put All Day</h3><p>解决卷腰、卷腿、后背上滑，重点验证久坐、通勤、走动 8–10 小时。</p><div class="proof">N 证据：不卷边 5.9% 好评 vs 卷边 5.8% 差评；通勤是最大实际使用场景。</div></div>
+<div class="op-card c5"><div class="rank">05</div><h3>Faja Curve Fit</h3><p>保留 N 的 Faja 强塑文化基因，同时为梨型、沙漏型、大臀腿提供更合理的比例适配。</p><div class="proof">N 证据：西裔文化型约 25–30%（女性画像估算），强塑、多排扣、沙漏是核心偏好。</div></div>
+<div class="op-card c1"><div class="rank">06</div><h3>Invisible + Breathable Plus</h3><p>强塑但不显形：无痕腿口、背部平顺、亲肤透气，解决制服/裙装下全天穿着。</p><div class="proof">N 证据：日常隐形搜索占 29.8%；舒适度 10.8% 是第二满意点。</div></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s11">
-  <div class="card">
-    <div class="head"><div><div class="kicker">11 PRODUCT STRUCTURE</div><h2>产品结构建议｜从用户痛点反推结构</h2></div></div>
-    <div class="structure-grid">
-      <div class="structure c1"><div class="zh-title">下腹定向承托<span class="sub-en">Lower Belly Support</span></div><p>托住下腹，而不是只在腰部持续加压。</p></div>
-      <div class="structure c2"><div class="zh-title">腹部定向塑形<span class="sub-en">Targeted Tummy</span></div><p>强塑区域集中在真正需要的位置。</p></div>
-      <div class="structure c3"><div class="zh-title">防卷腰稳定结构<span class="sub-en">Anti-Roll Waist</span></div><p>坐下、弯腰时保持腰口稳定，不形成新 bulge。</p></div>
-      <div class="structure c4"><div class="zh-title">背部平顺<span class="sub-en">Back Smoothing</span></div><p>减少 bra line 与 back bulge，兼顾礼服背部视觉。</p></div>
-      <div class="structure c5"><div class="zh-title">开放胸部<span class="sub-en">Open Bust</span></div><p>兼容用户自己的 Bra，提高大胸适配与自由度。</p></div>
-      <div class="structure c1"><div class="zh-title">大腿柔性轻塑<span class="sub-en">Soft Thigh</span></div><p>平顺、防磨腿，但不制造 muffin thigh。</p></div>
-      <div class="structure c2"><div class="zh-title">柔性防卷腿口<span class="sub-en">Stay-put Edge</span></div><p>合理裤长 + 柔性边缘，减少卷腿、勒痕与显边。</p></div>
-      <div class="structure c3"><div class="zh-title">便捷如厕结构<span class="sub-en">Easy Bathroom</span></div><p>Gusset / Hook & Eye / Rear-drop 等易操作方案。</p></div>
-      <div class="structure c4"><div class="zh-title">加长躯干适配<span class="sub-en">Extended Torso</span></div><p>减少裆部、肩带与胸部的纵向拉扯。</p></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">11 PRODUCT STRUCTURE</div><h2>产品结构建议｜把 N 的强项留下，把大码短板补上</h2></div></div>
+<div class="structure-grid">
+<div class="structure c1"><div class="zh-title">独立大码版型<span class="sub-en">Plus-Specific Fit</span></div><p>重新处理 Bust / Waist / Hip / Thigh / Torso / Crotch Depth，而不是普通码比例放大。</p></div>
+<div class="structure c2"><div class="zh-title">多档可调压缩<span class="sub-en">Adjustable Compression</span></div><p>多排扣或可调结构，适应产后、术后、体重变化期的动态身材。</p></div>
+<div class="structure c3"><div class="zh-title">下腹定向承托<span class="sub-en">Lower Belly Support</span></div><p>重点覆盖 mom pouch / FUPA / C-section shelf，不只追求腰围变细。</p></div>
+<div class="structure c4"><div class="zh-title">防卷稳定结构<span class="sub-en">Stay-put System</span></div><p>坐下、弯腰、走动时腰口和腿口保持稳定，减少 roll down / roll up。</p></div>
+<div class="structure c5"><div class="zh-title">柔性骨条 / 无骨方案<span class="sub-en">Soft-Boning Comfort</span></div><p>保留支撑，但降低骨条戳人、硬、痒、摩擦伤口等 N 高频差评。</p></div>
+<div class="structure c1"><div class="zh-title">大腿柔性轻塑<span class="sub-en">Soft Thigh</span></div><p>大腿平顺、防磨，但腿围独立放码，避免 muffin thigh。</p></div>
+<div class="structure c2"><div class="zh-title">胸部兼容结构<span class="sub-en">Bust-Friendly / Open Bust</span></div><p>大胸用户优先考虑 Open Bust、宽肩带或更大的胸部容积。</p></div>
+<div class="structure c3"><div class="zh-title">便捷如厕<span class="sub-en">Easy Bathroom</span></div><p>裆部开口、拉链或更易操作的扣合方式；N 评论中该细节已有 3.1% 正向提及。</p></div>
+<div class="structure c4"><div class="zh-title">长 / 短躯干适配<span class="sub-en">Torso Options</span></div><p>Long Torso 与 Short-waisted 问题均已在 N 评论中出现，应进入尺寸策略。</p></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s12">
-  <div class="card">
-    <div class="head"><div><div class="kicker">12 MARKETING MESSAGE</div><h2>营销表达｜从“纠正身体”转向“衣服更好穿”</h2></div></div>
-    <div class="compare-grid">
-      <div class="old">
-        <h3>旧表达<span class="sub-en">Body Correction</span></h3>
-        <div class="compare-row"><b>Hide your belly</b><span>强调遮盖</span></div>
-        <div class="compare-row"><b>Slim your thighs</b><span>强调变瘦</span></div>
-        <div class="compare-row"><b>Maximum compression</b><span>强调受力强度</span></div>
-        <div class="compare-row"><b>Make you look thinner</b><span>强调体型修正</span></div>
-      </div>
-      <div class="compare-arrow">→</div>
-      <div class="new">
-        <h3>新表达<span class="sub-en">Clothing Confidence</span></h3>
-        <div class="compare-row"><b>Smooth your silhouette</b><span>强调穿衣轮廓</span></div>
-        <div class="compare-row"><b>Smooth without squeezing</b><span>强调不硬勒</span></div>
-        <div class="compare-row"><b>Targeted shaping</b><span>强调精准塑形</span></div>
-        <div class="compare-row"><b>Shape where you want it</b><span>强调身体自主感</span></div>
-      </div>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">12 BRAND MESSAGE</div><h2>N 女性的心理路径：内部理解可以“藏拙”，外部表达要走向“掌控与自信”</h2></div>
+</div>
+<div class="emotion-path">
+<div class="emotion-step c1"><b>先解决“不想被看到”</b><span>Hide the rolls / FUPA / back fat</span></div>
+<div class="arrow">→</div>
+<div class="emotion-step c2"><b>再获得“即时改变”</b><span>Snatched / smoother / smaller-looking waist</span></div>
+<div class="arrow">→</div>
+<div class="emotion-step c3"><b>最终获得“穿衣自信”</b><span>Comfortable · Confident · In control</span></div>
+</div>
+<div class="compare-grid" style="margin-top:18px">
+<div class="old">
+<h3>不建议对外强化<span class="sub-en">Correction Language</span></h3>
+<div class="compare-row"><b>Hide your flaws</b><span>把身体定义成问题</span></div>
+<div class="compare-row"><b>Make you thinner</b><span>过度强调体重视觉</span></div>
+<div class="compare-row"><b>Maximum tightness</b><span>容易让用户联想到受罪</span></div>
+</div>
+<div class="compare-arrow">→</div>
+<div class="new">
+<h3>更适合 N 大码线<span class="sub-en">Control + Confidence</span></h3>
+<div class="compare-row"><b>Strong support, shaped for curves</b><span>强塑但尊重曲线身体</span></div>
+<div class="compare-row"><b>Smooth all day, stay in place</b><span>把全天体验说清楚</span></div>
+<div class="compare-row"><b>Adjust as your body changes</b><span>回应产后/术后的动态身材</span></div>
+</div>
+</div>
+<div class="culture-layer"><strong>Faja 文化层：</strong>对西裔客群，“Faja”不是普通功能词，而是强力、沙漏、专业塑形与文化习惯的复合心智。建议保留西语关键词与文化表达，但产品视觉和尺码体系要更现代、更包容。</div>
+</div>
 </section>
-
 <section class="section" id="s13">
-  <div class="card">
-    <div class="head"><div><div class="kicker">13 PDP STORYBOARD</div><h2>PDP 不该只是模特站着拍｜要证明“真实使用”</h2></div></div>
-    <div class="storyboard">
-      <div class="shot"><div class="mock">↔</div><div class="cap"><b>正面 + 侧面</b><p>证明腹部与下腹到底平顺多少。</p></div></div>
-      <div class="shot"><div class="mock">◐</div><div class="cap"><b>坐下</b><p>证明腰口不会 roll down。</p></div></div>
-      <div class="shot"><div class="mock">↗</div><div class="cap"><b>走路 / 抬腿</b><p>证明腿口不会 roll up。</p></div></div>
-      <div class="shot"><div class="mock">◇</div><div class="cap"><b>Fitted Dress</b><p>证明 seam / leg line 不明显。</p></div></div>
-      <div class="shot"><div class="mock">↺</div><div class="cap"><b>如厕结构</b><p>用步骤图直接降低操作焦虑。</p></div></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">13 PDP STORYBOARD</div><h2>PDP 需要回答 N 大码用户最担心的 6 个问题</h2></div></div>
+<div class="storyboard">
+<div class="shot"><div class="mock">1X–5X</div><div class="cap"><b>真实大码 Fit</b><p>不同 Body Shape 真人 + Height / Bust / Waist / Hip / Wearing Size，先消灭尺码焦虑。</p></div></div>
+<div class="shot"><div class="mock">↔</div><div class="cap"><b>下腹前后对比</b><p>侧面重点展示 mom pouch / FUPA 的承托，不只看腰线。</p></div></div>
+<div class="shot"><div class="mock">10H</div><div class="cap"><b>全天通勤</b><p>坐下、弯腰、走路，证明 8–10 小时不卷、不勒、不频繁调整。</p></div></div>
+<div class="shot"><div class="mock">3×</div><div class="cap"><b>多档调节</b><p>把多排扣 / 多档压力做成明确可视化，突出动态身材适配。</p></div></div>
+<div class="shot"><div class="mock">↺</div><div class="cap"><b>如厕结构</b><p>用步骤图展示裆部开口/扣合方式，减少产后、术后、职场用户的操作焦虑。</p></div></div>
+</div>
+<div class="storyboard" style="margin-top:10px">
+<div class="shot"><div class="mock">◒</div><div class="cap"><b>Long Torso</b><p>展示常规身长与加长适配差异，直接回应 N 评论中的明确痛点。</p></div></div>
+<div class="shot"><div class="mock">≈</div><div class="cap"><b>无痕腿口</b><p>紧身裙外穿验证，避免腿口与骨条显形。</p></div></div>
+<div class="shot"><div class="mock">☁</div><div class="cap"><b>透气触感</b><p>微距展示透气网眼、亲肤层和柔性骨条区域。</p></div></div>
+<div class="shot"><div class="mock">ES</div><div class="cap"><b>西语信任层</b><p>Faja / Moldeadora / Colombiana 等关键词与简明西语尺码说明。</p></div></div>
+<div class="shot"><div class="mock">♥</div><div class="cap"><b>Confidence Moment</b><p>最终落到“穿衣好看、身体有掌控感”，而不是只展示腰围数字。</p></div></div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s14">
-  <div class="card">
-    <div class="head"><div><div class="kicker">14 BRAND VISUAL REFERENCE</div><h2>品牌视觉参考｜看结构，也看它们如何“证明”结构</h2></div></div>
-    <div class="visual-grid">
-      <div class="visual">
-        <img src="https://skims.imgix.net/s/files/1/0259/5448/4284/files/BD-ONS-11239W-ONX-HD-SKIMS-SHAPEWEAR_29596-FR.webp?auto=format%2Ccompress&h=1200&q=72&v=1773528690&w=900" alt="SKIMS Open Bust">
-        <div class="cap"><b>开放胸部 + 中腿长<span class="sub-en">Open Bust + Mid-Thigh</span></b><p>大胸用户保留自己的 Bra，同时处理中腿平顺与防磨。</p><a href="https://skims.com/products/power-mesh-shapewear-core-sculpt-open-bust-mid-thigh-bodysuit-onyx" target="_blank">官方来源</a></div>
-      </div>
-      <div class="visual">
-        <img src="https://skims.imgix.net/s/files/1/0259/5448/4284/files/BD-MDT-3375-JSP-HB-SKIMS-SHAPEWEAR_0009-FR.jpg?auto=format%2Ccompress&h=1200&q=72&v=1742589537&w=900" alt="SKIMS Low Back">
-        <div class="cap"><b>低背礼服适配<span class="sub-en">Low Back</span></b><p>礼服适配不只是腹部塑形，也看后背高度和肩带兼容。</p><a href="https://skims.com/en-gb/products/seamless-sculpt-low-back-mid-thigh-bodysuit-jasper" target="_blank">官方来源</a></div>
-      </div>
-      <div class="visual">
-        <img src="https://skims.imgix.net/s/files/1/0259/5448/4284/files/BD-MDT-3375-JSP-HB-SKIMS-SHAPEWEAR_0016-BK.jpg?auto=format%2Ccompress&h=1200&q=72&v=1742589537&w=900" alt="SKIMS Back">
-        <div class="cap"><b>背部平顺<span class="sub-en">Back Coverage</span></b><p>Back smoothing 是礼服和紧身裙的重要任务。</p><a href="https://skims.com/en-gb/products/seamless-sculpt-low-back-mid-thigh-bodysuit-jasper" target="_blank">官方来源</a></div>
-      </div>
-      <div class="visual">
-        <img src="https://cdn.shopify.com/s/files/1/0965/6676/files/21-crossover_cami_bodysuit-vamp-m-mei_2370_R1_1.jpg?crop=center&v=1743694031&width=900" alt="Honeylove Crossover">
-        <div class="cap"><b>胸托 + 如厕便利<span class="sub-en">Built-in Support + Bathroom Friendly</span></b><p>把支撑、分区塑形、肩带调节、如厕便利组合为完整体验。</p><a href="https://www.honeylove.com/products/crossover-cami-bodysuit" target="_blank">官方来源</a></div>
-      </div>
+<div class="card">
+<div class="fit-proof-top">
+<div class="fit-proof-title">
+<div class="kicker">14 PLUS-SIZE FIT PROOF</div>
+<h2>大码用户真正需要看到什么证据？</h2>
+<div class="subline">Plus-Size Fit Proof｜降低 Fit 不确定性，而不是单纯展示产品结构</div>
+</div>
+<div class="fit-proof-summary">
+<b>核心：从“产品展示”转向“身体适配证明”</b>
+      视觉需要回答：这个身体和我像不像？下腹有没有被托住？坐下会不会卷？大腿会不会勒？身长够不够？
     </div>
-  </div>
+</div>
+<div class="fit-proof-grid">
+<div class="fit-proof-card">
+<div class="fit-proof-visual">
+<div class="fit-proof-icon">
+<span class="person p1"></span><span class="person p2"></span><span class="person p3"></span><span class="person p4"></span>
+</div>
+</div>
+<div class="fit-proof-body">
+<h3>真实大码多体型模特<span class="sub-en">Real Plus-Size Body Diversity</span></h3>
+<div class="fit-proof-key">1X–4X × Apple / Pear / Apron Belly / Hourglass，不用一个“偏丰满模特”代表所有大码身体。</div>
+<div class="fit-proof-q"><b>用户要确认：</b>“这个身体和我像不像？”</div>
+</div>
+</div>
+<div class="fit-proof-card">
+<div class="fit-proof-visual"><div class="belly-visual"></div></div>
+<div class="fit-proof-body">
+<h3>下腹侧面证据<span class="sub-en">Lower Belly / Apron Belly Proof</span></h3>
+<div class="fit-proof-key">重点展示 mom pouch / FUPA / apron belly 的侧面承托，不只拍正面腰围变细。</div>
+<div class="fit-proof-q"><b>用户要确认：</b>“我的下腹是真的被托住了吗？”</div>
+</div>
+</div>
+<div class="fit-proof-card">
+<div class="fit-proof-visual">
+<div class="motion-visual"><span>坐</span><span>弯</span><span>走</span></div>
+</div>
+<div class="fit-proof-body">
+<h3>坐姿与动态稳定<span class="sub-en">Sit / Bend / Walk Test</span></h3>
+<div class="fit-proof-key">坐下、弯腰、走路连续验证腰口和腿口是否保持稳定，而不是只看站立静态。</div>
+<div class="fit-proof-q"><b>用户要确认：</b>“我上班坐 8 小时会不会卷？”</div>
+</div>
+</div>
+<div class="fit-proof-card">
+<div class="fit-proof-visual">
+<div class="thigh-visual"><span></span><span></span></div>
+</div>
+<div class="fit-proof-body">
+<h3>大腿腿口近景<span class="sub-en">Thigh Fit Proof</span></h3>
+<div class="fit-proof-key">拍腿口与皮肤过渡，证明不会 cut into thighs、不会制造 muffin thigh，也不会留下明显勒痕。</div>
+<div class="fit-proof-q"><b>用户要确认：</b>“会不会在大腿上再勒出一道肉？”</div>
+</div>
+</div>
+<div class="fit-proof-card">
+<div class="fit-proof-visual">
+<div class="torso-visual"><div class="body"></div><div class="arr"></div></div>
+</div>
+<div class="fit-proof-body">
+<h3>身长与裆部适配<span class="sub-en">Torso Length Proof</span></h3>
+<div class="fit-proof-key">展示肩带、胸腹、裆部纵向位置，让 Long Torso / Short Torso 用户判断 Bodysuit 是否真正合身。</div>
+<div class="fit-proof-q"><b>用户要确认：</b>“横向能穿，纵向会不会勒裆、拉肩？”</div>
+</div>
+</div>
+<div class="fit-proof-card">
+<div class="fit-proof-visual">
+<div class="data-visual"><div></div><div></div><div></div><div></div></div>
+</div>
+<div class="fit-proof-body">
+<h3>完整真人参数<span class="sub-en">Fit Data, Not Just Size</span></h3>
+<div class="fit-proof-key">Height + Bust + Waist + Hip + Torso + Wearing Size，帮助用户建立真实身体参照，而不是只写 Model wears 2X。</div>
+<div class="fit-proof-q"><b>用户要确认：</b>“我到底应该买哪个码？”</div>
+</div>
+</div>
+</div>
+<div class="n-proof-panel">
+<div>
+<h3>N 为什么尤其需要把“视觉”做成 Fit Proof？</h3>
+<p>N 的大码问题不是“缺少漂亮模特图”，而是用户缺少足够证据判断产品是否真的适合自己的身体。视觉要承担 <strong>尺码解释 + 身体相似度证明 + 动态稳定性证明</strong>。</p>
+</div>
+<div class="n-proof-stats">
+<div class="n-proof-stat"><b>13.3%</b><span>尺码偏小 / 难选</span></div>
+<div class="n-proof-stat"><b>2.6%</b><span>Long / Short Torso 不适配</span></div>
+<div class="n-proof-stat"><b>已出现</b><span>Plus Size / Apron Belly / Mom Pouch</span></div>
+</div>
+</div>
+<div class="fit-proof-conclusion">
+<strong>N 大码线的视觉任务：</strong>不是“拍得更丰满”，而是证明——<strong>这个版型真的理解曲线身体。</strong>
+</div>
+<div class="source-row">
+<a href="https://baymard.com/research-articles/apparel-and-accessories-quantitative-ux-insights-2026" target="_blank">Baymard｜Fit / Review 决策</a>
+<a href="https://www.vogue.com/article/the-editors-cut-a-full-data-breakdown-from-the-vogue-business-consumer-sizing-survey" target="_blank">Vogue Business｜Sizing Survey</a>
+</div>
+</div>
 </section>
-
 <section class="section" id="s15">
-  <div class="card">
-    <div class="head"><div><div class="kicker">15 SEARCH LANGUAGE</div><h2>用户搜索的不是“产品”，而是自己的问题</h2></div></div>
-    <div class="search-cloud">
-      <span class="big">plus size shapewear</span>
-      <span class="big">apron belly</span>
-      <span class="mid">lower belly</span>
-      <span class="mid">anti chafing</span>
-      <span>no roll</span><span>stay put</span><span>no muffin thigh</span>
-      <span class="mid">open bust</span><span>long torso</span>
-      <span>wedding shapewear</span><span>under dresses</span>
-      <span>mid thigh</span><span>4x shapewear</span><span>5x shapewear</span>
-    </div>
-  </div>
+<div class="card">
+<div class="head">
+<div><div class="kicker">15 N SEARCH LANGUAGE</div><h2>N 的搜索词已经在告诉我们：大码用户在找“更精准的解决方案”</h2></div>
+</div>
+<div class="search-cloud">
+<span class="big">waist trainer for women · 407.5w</span>
+<span class="big">shapewear tummy control · 113.3w</span>
+<span class="big">fajas colombianas moldeadoras · 86.8w</span>
+<span class="mid">faja body shaper · 64.8w</span>
+<span class="mid">lower belly fat · 11.1w</span>
+<span class="mid">fupa control shapewear · 4.1w</span>
+<span>seamless shapewear · 3.3w</span>
+<span>plus size waist trainer · 2.8w</span>
+<span>long torso waist trainer · 2.3w</span>
+<span>butt lifting shapewear · 3.6w</span>
+</div>
+<div class="search-evidence">
+<div class="search-card"><b>通用词 = 规模入口</b><span>waist trainer / tummy control / shapewear</span></div>
+<div class="search-card"><b>文化词 = N 品牌资产</b><span>faja / fajas colombianas / moldeadoras</span></div>
+<div class="search-card"><b>问题词 = 高信任机会</b><span>plus size / long torso / FUPA / lower belly</span></div>
+</div>
+<div class="note">以上搜索量按 N 原报告展示口径保留“w”单位，不在本报告中重新换算。</div>
+</div>
 </section>
-
 <section class="section" id="s16">
-  <div class="card">
-    <div class="head"><div><div class="kicker">16 NEED PYRAMID</div><h2>需求金字塔｜先适配，再谈情绪价值</h2></div></div>
-    <div class="pyramid">
-      <div class="p5">⑤ 身份尊重｜Identity</div>
-      <div class="p4">④ 穿衣信心｜Confidence</div>
-      <div class="p3">③ 轮廓表现｜Appearance</div>
-      <div class="p2">② 使用便利｜Usability</div>
-      <div class="p1">① 真实适配｜Fit</div>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">16 N NEED LADDER</div><h2>N 大码线的需求层级｜先活下来，再做惊喜</h2></div></div>
+<div class="pyramid">
+<div class="p5">⑤ 魅力需求｜提臀、沙漏曲线、文化认同与品牌感</div>
+<div class="p4">④ 细节惊喜｜方便如厕、多档调节、真正“懂我”</div>
+<div class="p3">③ 满意分水岭｜全天舒适、透气、隐形无痕</div>
+<div class="p2">② 隐性刚需｜不卷边、不移位、久坐稳定</div>
+<div class="p1">① 生存线｜压缩有效 + 尺码准确 + 特殊身型适配</div>
+</div>
+<div class="n-strip">
+<b>N 当前状态</b>
+<p><strong>压缩效果已经是优势，尺码却是最大短板。</strong> 因此大码线优先级应从“继续增强压缩”转成“把有效压缩做在真正合身的身体上”。</p>
+</div>
+</div>
 </section>
-
 <section class="section" id="s17">
-  <div class="card">
-    <div class="head"><div><div class="kicker">17 NEBILITY PRODUCT DEFINITION</div><h2>Nebility 产品定义蓝图</h2></div></div>
-    <div class="blueprint">
-      <div class="blueprint-main">
-        <h3>Plus-Specific Fit System</h3>
-        <p>针对美国 US 16–28+ 曲线女性，围绕下腹、臀腿、大胸、长躯干和长时间穿着，重新定义真实大码版型与结构。</p>
-        <div class="bp-tags">
-          <span>Lower Belly Support</span><span>Targeted Compression</span><span>Soft Thigh</span><span>Stay-put</span><span>Easy Bathroom</span><span>Back Smoothing</span>
-        </div>
-        <div class="usp">Strong where you want it.<br>Soft where you need it.</div>
-      </div>
-      <div class="blueprint-side">
-        <div class="bp-box"><b>目标人群</b><p>US 16–28+，重点覆盖下腹明显、臀腿丰满、大胸与长时穿着。</p></div>
-        <div class="bp-box"><b>核心场景</b><p>Wedding / Work / Date / Daily / Travel。</p></div>
-        <div class="bp-box"><b>核心矛盾</b><p>要明显塑形，但不想卷边、勒腿、压胸、闷热、如厕困难。</p></div>
-        <div class="bp-box"><b>核心价值</b><p>明显塑形 + 更低的舒适成本与操作成本。</p></div>
-      </div>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">17 NEBILITY PLUS-SIZE PRODUCT DEFINITION</div><h2>N 大码女性产品定义蓝图</h2></div></div>
+<div class="blueprint">
+<div class="blueprint-main">
+<span class="n-badge">建议定位</span>
+<h3 style="margin-top:12px">Curve-Specific Faja Shapewear System</h3>
+<p>为美国 1X–5X 曲线女性，尤其是产后、术后、通勤与西裔 Faja 用户，提供<strong>强力有效但真正适配曲线身体</strong>的全天塑身方案。</p>
+<div class="bp-tags">
+<span>Plus-Specific Fit</span><span>Adjustable Compression</span><span>Lower Belly Support</span><span>Stay-put</span><span>Soft Thigh</span><span>Easy Bathroom</span><span>Torso Options</span>
+</div>
+<div class="usp">Firm where you need support.<br/>Flexible where your body moves.</div>
+</div>
+<div class="blueprint-side">
+<div class="bp-box"><b>核心人群</b><p>35–54 岁为品牌主力；向 25–40 产后与 45+ 术后延伸。</p></div>
+<div class="bp-box"><b>核心文化</b><p>Faja 强塑心智 + 西裔文化认同，但视觉与尺码系统更现代。</p></div>
+<div class="bp-box"><b>核心矛盾</b><p>想要明显收腹，却被尺码偏小、卷边、骨条戳、长短躯干不适配反复劝退。</p></div>
+<div class="bp-box"><b>核心价值</b><p>强塑不打折，适配感、全天舒适与动态身体友好显著升级。</p></div>
+</div>
+</div>
+</div>
 </section>
-
 <section class="section" id="s18">
-  <div class="card">
-    <div class="head"><div><div class="kicker">18 DEVELOPMENT VALIDATION</div><h2>开发验证面板｜不是“穿上就算通过”</h2></div></div>
-    <div class="check-grid">
-      <div class="check"><div class="tick">✓</div><b>尺码递进</b><p>1X–5X 是否真实递进，而非比例放大。</p></div>
-      <div class="check"><div class="tick">✓</div><b>坐姿腹部</b><p>上腹/下腹是否形成新 bulge。</p></div>
-      <div class="check"><div class="tick">✓</div><b>腰口稳定</b><p>坐下、弯腰是否 roll down。</p></div>
-      <div class="check"><div class="tick">✓</div><b>腿口稳定</b><p>走路、抬腿是否 roll up。</p></div>
-      <div class="check"><div class="tick">✓</div><b>臀型保留</b><p>是否 flatten butt。</p></div>
-      <div class="check"><div class="tick">✓</div><b>大胸适配</b><p>是否压胸、溢杯、肩带勒。</p></div>
-      <div class="check"><div class="tick">✓</div><b>如厕效率</b><p>能否快速完成，不必整件脱。</p></div>
-      <div class="check"><div class="tick">✓</div><b>长时穿着</b><p>6–10 小时是否闷热、疼痛或频繁调整。</p></div>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">18 DEVELOPMENT VALIDATION</div><h2>开发验证面板｜按 N 的真实差评去做 UAT</h2></div></div>
+<div class="check-grid">
+<div class="check"><div class="tick">✓</div><b>大码尺码递进</b><p>1X–5X 不只是围度放大；验证腰臀差、大腿围、胸围和裆深。</p></div>
+<div class="check"><div class="tick">✓</div><b>动态尺码</b><p>产后/术后消肿或体型变化时，多档调节是否真正可用。</p></div>
+<div class="check"><div class="tick">✓</div><b>Long / Short Torso</b><p>肩带、裆部、骨条是否因身长不匹配而戳、勒、上移。</p></div>
+<div class="check"><div class="tick">✓</div><b>下腹承托</b><p>站立和坐姿下是否真正处理 mom pouch / FUPA，而不是制造上下腹分层。</p></div>
+<div class="check"><div class="tick">✓</div><b>卷边稳定</b><p>久坐、弯腰、走路、抬腿后腰口与腿口是否卷曲或滑移。</p></div>
+<div class="check"><div class="tick">✓</div><b>骨条与摩擦</b><p>连续 8–10 小时是否戳皮肤、磨伤口、留下明显压痕。</p></div>
+<div class="check"><div class="tick">✓</div><b>如厕效率</b><p>用户是否能单独、快速操作，不需要整件脱下。</p></div>
+<div class="check"><div class="tick">✓</div><b>隐形外穿</b><p>衬衫、护士服、紧身裙下是否显边、显骨条或透色。</p></div>
+</div>
+</div>
 </section>
-
-
 <section class="section" id="s19">
-  <div class="card">
-    <div class="head"><div><div class="kicker">19 EVIDENCE INDEX</div><h2>证据来源索引</h2></div></div>
-    <div class="source-table">
-      <table>
-        <thead><tr><th>来源类型</th><th>来源</th><th>主要支持内容</th><th>链接</th></tr></thead>
-        <tbody>
-          <tr><td>行业标准</td><td>ASTM Plus Women's Figure Type</td><td>Plus Size 尺码体系 / 14W–40W</td><td><a href="https://store.astm.org/d6960_d6960m-16r23.html" target="_blank">打开</a></td></tr>
-          <tr><td>学术研究</td><td>US women's clothing size study</td><td>美国女性体型与服装尺码变化</td><td><a href="https://www.tandfonline.com/doi/abs/10.1080/17543266.2016.1214291" target="_blank">打开</a></td></tr>
-          <tr><td>UX 研究</td><td>Baymard Apparel 2026</td><td>Fit、Review、线上购买判断</td><td><a href="https://baymard.com/research-articles/apparel-and-accessories-quantitative-ux-insights-2026" target="_blank">打开</a></td></tr>
-          <tr><td>消费者研究</td><td>Vogue Business Sizing Survey</td><td>尺码不一致、多体型展示</td><td><a href="https://www.vogue.com/article/the-editors-cut-a-full-data-breakdown-from-the-vogue-business-consumer-sizing-survey" target="_blank">打开</a></td></tr>
-          <tr><td>品牌产品</td><td>SKIMS</td><td>Open Bust、Low Back、压缩等级</td><td><a href="https://skims.com/collections/shapewear-bodysuits" target="_blank">打开</a></td></tr>
-          <tr><td>品牌产品</td><td>Honeylove</td><td>Targeted Compression、Bathroom Friendly、Back Smoothing</td><td><a href="https://www.honeylove.com/collections/plus-size-shapewear" target="_blank">打开</a></td></tr>
-          <tr><td>Reddit VOC</td><td>Apron Belly / Wedding / Roll-up / Anti-Chafing</td><td>真实痛点与消费者语言</td><td><a href="https://www.reddit.com/r/PlusSizeFashion/" target="_blank">打开</a></td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">19 EVIDENCE INDEX</div><h2>证据来源索引｜N 内部数据优先，外部研究做补充</h2></div></div>
+<div class="source-table">
+<table>
+<thead><tr><th>来源层级</th><th>来源</th><th>主要支持内容</th><th>说明 / 链接</th></tr></thead>
+<tbody>
+<tr class="n-source"><td>内部主证据</td><td>Nebility-AMZ-US 用户画像分析及拓展方向洞察</td><td>人口属性、女性细分画像、90 天搜索行为、近两年 2,000 条评论、满意/不满、地域、Faja 文化、产后/术后/大码/Long Torso 等</td><td>本轮上传文件 · 分析日期 2026-04-20</td></tr>
+<tr><td>行业标准</td><td>ASTM Plus Women's Figure Type</td><td>Plus Size 尺码体系 / 14W–40W</td><td><a href="https://store.astm.org/d6960_d6960m-16r23.html" target="_blank">打开</a></td></tr>
+<tr><td>UX 研究</td><td>Baymard Apparel 2026</td><td>Fit、Review、线上购买判断</td><td><a href="https://baymard.com/research-articles/apparel-and-accessories-quantitative-ux-insights-2026" target="_blank">打开</a></td></tr>
+<tr><td>消费者研究</td><td>Vogue Business Sizing Survey</td><td>尺码不一致、多体型展示</td><td><a href="https://www.vogue.com/article/the-editors-cut-a-full-data-breakdown-from-the-vogue-business-consumer-sizing-survey" target="_blank">打开</a></td></tr>
+<tr><td>品牌产品</td><td>SKIMS / Honeylove</td><td>Open Bust、Low Back、Targeted Compression、Bathroom Friendly</td><td><a href="https://skims.com/collections/shapewear-bodysuits" target="_blank">SKIMS</a> · <a href="https://www.honeylove.com/collections/plus-size-shapewear" target="_blank">Honeylove</a></td></tr>
+</tbody>
+</table>
+</div>
+</div>
 </section>
-
 <section class="section" id="s20">
-  <div class="card">
-    <div class="head"><div><div class="kicker">20 FINAL SHIFT</div><h2>最终企划转变</h2></div></div>
-    <div class="final-shift">
-      <div class="shift-col shift-old">
-        <h3>旧思路</h3>
-        <div class="shift-item">把普通尺码放大</div>
-        <div class="shift-item">全身更紧</div>
-        <div class="shift-item">只做 Tummy Control</div>
-        <div class="shift-item">只看站立效果</div>
-        <div class="shift-item">强调显瘦</div>
-        <div class="shift-item">用 XL 模特代表 Plus</div>
-      </div>
-      <div class="compare-arrow">→</div>
-      <div class="shift-col shift-new">
-        <h3>更适合大码市场的新思路</h3>
-        <div class="shift-item">建立 Plus-Specific Fit</div>
-        <div class="shift-item">建立分区压力</div>
-        <div class="shift-item">下腹 / 背 / 大腿 / 胸 / Torso 一起考虑</div>
-        <div class="shift-item">增加坐姿 / 走路 / 如厕 / 长时穿着验证</div>
-        <div class="shift-item">强调 Smooth / Support / Stay-put</div>
-        <div class="shift-item">多尺码、多体型真人 Fit</div>
-      </div>
-    </div>
-    <div class="core-quote" style="margin-top:18px">大码塑身衣真正的机会，不是把产品做得“更紧、更大码”，而是重新设计 <strong>Fit、压力分布、稳定性和长时间使用体验</strong>。</div>
-  </div>
+<div class="card">
+<div class="head"><div><div class="kicker">20 FINAL SHIFT</div><h2>结合 N 用户画像后，大码线的企划逻辑要发生什么变化？</h2></div></div>
+<div class="final-shift">
+<div class="shift-col shift-old">
+<h3>如果只看通用“大码市场”</h3>
+<div class="shift-item">大码 = 普通尺码放大</div>
+<div class="shift-item">强塑 = 全身更紧</div>
+<div class="shift-item">主要场景 = 礼服 / 特殊场合</div>
+<div class="shift-item">核心卖点 = Tummy Control</div>
+<div class="shift-item">大码沟通 = Plus Size 标签</div>
+<div class="shift-item">尺码问题 = Listing 解释问题</div>
+</div>
+<div class="compare-arrow">→</div>
+<div class="shift-col shift-new">
+<h3>结合 N 后的真实方向</h3>
+<div class="shift-item">大码 = 曲线版型 + 生命阶段 + Torso + Bust 的复合适配</div>
+<div class="shift-item">强塑 = Faja 有效压缩 + 分区舒适 + 动态调节</div>
+<div class="shift-item">主要场景 = 日常通勤为基本盘，产后/术后为高价值刚需，特殊场合做节点增量</div>
+<div class="shift-item">核心卖点 = Lower Belly + Stay-put + Invisible + Adjustable + Easy Bathroom</div>
+<div class="shift-item">文化沟通 = Faja 资产 + 西语信任 + 更包容的现代视觉</div>
+<div class="shift-item">尺码问题 = 产品和版型的 P0，不是文案可以补救的问题</div>
+</div>
+</div>
+<div class="core-quote" style="margin-top:18px"><strong>N 大码女性不是“需要更大号的人”。</strong> 她们更像身体正在变化、但仍希望主动管理自己的人。下一款真正有机会的产品，应当让她们感受到：<strong>效果没有被牺牲，身体却终于被正确理解。</strong></div>
+</div>
 </section>
-
-<div class="footer">Nebility / Amazon US · Plus-Size Shapewear User Insight · Visual Report V3 · 2026</div>
+<div class="footer">Nebility / Amazon US · Plus-Size Women User Insight × N Brand Persona · Visual Report V4 · 2026</div>
 </main>
-
 <script>
 const links=[...document.querySelectorAll('.nav a')];
 const secs=[...document.querySelectorAll('.section[id]')];
